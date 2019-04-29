@@ -13,13 +13,21 @@
     <div id="workspace">
         <img  id ="background" src="Arbeitszimmer_mit_Stuhl.jpg" alt="Arbeitszimmer mit Stuhl" usemap="#map">
         <map name="map">
-          <area id="one" alt="pinboard" shape="poly" coords="20,73,363,69,354,262,20,254" alt="markiert" href ="javascript:displayModal();">
+          <area id="one" alt="pinboard" shape="poly" coords="27,87,370,83,372,267,35,269" alt="markiert" href ="javascript:displayModal('modal1');">
+          <area id="two" alt="pinboard" shape="poly" coords="455,227,498,255,456,321,415,295" alt="markiert" href ="javascript:displayModal('modal2');">
         </map>
 
-        <div id="modal" class="modal">
+        <div id="modal1" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
             <p>Here could be the picture of the pinboard</p>
+          </div>
+        </div>
+
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Here could be the index</p>
           </div>
         </div>
     </div>
