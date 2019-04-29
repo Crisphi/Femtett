@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charstet="utf-8">
+    <title>Femtett - Adventure Game</title>
+    <script src="Mainpage.js"></script>
+    <link rel="stylesheet" type="text/css" href="Mainpage.css">
+  </head>
+  <body>
+    <div id="heading">
+      <h1>Femtett <br/> Adventure Game</h1>
+    </div>
+    <div id="workspace">
+        <img  id ="background" src="Arbeitszimmer_mit_Stuhl.jpg" alt="Arbeitszimmer mit Stuhl" usemap="#map">
+        <map name="map">
+          <area id="one" alt="pinboard" shape="poly" coords="20,73,363,69,354,262,20,254" alt="markiert" href ="javascript:displayModal();">
+        </map>
+
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Here could be the picture of the pinboard</p>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
