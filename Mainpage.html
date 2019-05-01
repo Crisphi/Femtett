@@ -5,6 +5,7 @@
     <title>Femtett - Adventure Game</title>
     <script src="Mainpage.js"></script>
     <link rel="stylesheet" type="text/css" href="Mainpage.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
   </head>
   <body>
     <div id="heading">
@@ -13,8 +14,8 @@
     <div id="workspace">
         <img  id ="background" src="Arbeitszimmer_mit_Stuhl.jpg" alt="Arbeitszimmer mit Stuhl" usemap="#map">
         <map name="map">
-          <area id="one" alt="pinboard" shape="poly" coords="27,87,370,83,372,267,35,269" alt="markiert" href ="javascript:displayModal('modal1');">
-          <area id="two" alt="pinboard" shape="poly" coords="455,227,498,255,456,321,415,295" alt="markiert" href ="javascript:displayModal('modal2');">
+          <area id="one" alt="pinboard" shape="poly" coords="27,87,370,83,372,267,35,269" alt="markiert" href ="javascript:displayModal('modal1',0);">
+          <area id="two" alt="index" shape="poly" coords="455,227,498,255,456,321,415,295" alt="markiert" href ="javascript:displayModal('modal2',1);">
         </map>
 
         <div id="modal1" class="modal">
@@ -28,6 +29,15 @@
           <div class="modal-content">
             <span class="close">&times;</span>
             <p>Here could be the index</p>
+          </div>
+        </div>
+
+        <i id="icon" class="fas fa-book-open" style="font-size:36px" onclick="displayModal('modal3',2)"></i>
+
+        <div id="modal3" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="cardAlbum" src="Album_leer.png" alt="Kartenalbum">
           </div>
         </div>
     </div>
