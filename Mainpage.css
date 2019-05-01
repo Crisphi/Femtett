@@ -1,6 +1,6 @@
 
 body{
-  background-color: white;
+  background-color: black;
   color: white;
 }
 
@@ -11,6 +11,7 @@ body{
 }
 
 #background{
+  z-index: 6;
   width: 748px;
   height: 560.95px;
   display:inline-block;
