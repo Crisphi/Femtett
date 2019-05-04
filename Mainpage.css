@@ -112,7 +112,7 @@ body{
   height: 170px;
   z-index: 1;
 }
-#e3{
+#f1{
   position: absolute;
   top: 75px;
   left: 734px;
@@ -120,7 +120,7 @@ body{
   height: 170px;
   z-index: 1;
 }
-#e4{
+#f2{
   position: absolute;
   top: 75px;
   left: 890px;
@@ -128,7 +128,7 @@ body{
   height: 170px;
   z-index: 1;
 }
-#f1{
+#e3{
   position: absolute;
   top: 296px;
   left: 335px;
@@ -136,7 +136,7 @@ body{
   height: 170px;
   z-index: 1;
 }
-#f2{
+#e4{
   position: absolute;
   top: 296px;
   left: 495px;
