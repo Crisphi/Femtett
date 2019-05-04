@@ -43,6 +43,13 @@ function displayCard(areaId,cardId){
   }
 }
 
+function createArea(areaId,cardId){
+  var coords =  cardAreas[cardId];
+  var area = document.getElementById(areaId);
+  area.coords = coords;
+  area.href = "javascript:overlayOn('"+ cardId +"');";
+}
+
 /** just for testing**/
 function displayAllCards(){
   var cards = ["e1","e2","e3","e4","f1","f2","f3","f4"];
@@ -54,12 +61,4 @@ function displayAllCards(){
 function allCards(value){
   var card = document.getElementById(value);
   card.style.display = "inline";
-}
-
-/**trying to create area object**/
-function createArea(areaId,cardId){
-  var coords =  cardAreas[cardId];
-  var area = document.getElementById(areaId);
-  area.coords = coords;
-  area.href = "javascript:overlayOn('"+ cardId +"');";
 }
