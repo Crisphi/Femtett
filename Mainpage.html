@@ -83,8 +83,19 @@
         </div>
       </div>
 <!-- Overlay for cards-->
-      <div id="overlay"  onclick="overlayOff()">
+      <div id="cardOverlay" onclick="overlayOff('cardOverlay')">
         <img id="card">
+      </div>
+
+      <div id="modal4" class="modal">
+        <div id="modal4content" class="modal-content">
+          <span class="close">&times;</span>
+          <p>Du hast eine Karte aufgesammelt!</p>
+        </div>
+      </div>
+<!-- Ending -->
+      <div id="ending" onclick="overlayOff('ending')">
+        <div id="endingContent">Here could be the ending</div>
       </div>
     </div>
   </body>
