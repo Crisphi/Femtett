@@ -92,7 +92,7 @@ body{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  position:relative;
   z-index: 2;
 }
 
@@ -103,6 +103,7 @@ body{
   width: auto;
   height: 170px;
   z-index: 1;
+  display: none;
 }
 #e2{
   position: absolute;
@@ -111,6 +112,7 @@ body{
   width: auto;
   height: 170px;
   z-index: 1;
+  display: none;
 }
 #f1{
   position: absolute;
@@ -119,6 +121,7 @@ body{
   width: auto;
   height: 170px;
   z-index: 1;
+  display: none;
 }
 #f2{
   position: absolute;
@@ -127,6 +130,7 @@ body{
   width: auto;
   height: 170px;
   z-index: 1;
+  display: none;
 }
 #e3{
   position: absolute;
@@ -135,6 +139,7 @@ body{
   width: auto;
   height: 170px;
   z-index: 1;
+  display: none;
 }
 #e4{
   position: absolute;
@@ -143,6 +148,7 @@ body{
   width: auto;
   height: 170px;
   z-index: 1;
+  display: none;
 }
 #f3{
   position: absolute;
@@ -151,6 +157,7 @@ body{
   width: auto;
   height: 170px;
   z-index: 1;
+  display: none;
 }
 #f4{
   position: absolute;
@@ -159,6 +166,7 @@ body{
   width: auto;
   height: 170px;
   z-index: 1;
+  display: none;
 }
 
 #modal4 {
@@ -173,4 +181,12 @@ body{
   overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.7);
+}
+
+#testingButtons{
+    float: right;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right:0;
 }

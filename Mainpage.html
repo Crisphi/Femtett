@@ -43,6 +43,20 @@
       <!-- button for offline testing-->
       <!--<button id="altButton" class="button" onclick="displayModal('modal3',2)">cardAlbum</button>-->
 
+      <!-- buttons for tetsting card display -->
+      <div id="testingButtons">
+        <p>Buttons for testing</p>
+        <button id="b1" class="button" onclick="displayCard('e1')">Display Card E1</button> </br>
+        <button id="b2" class="button" onclick="displayCard('e2')">Display Card E2</button> </br>
+        <button id="b3" class="button" onclick="displayCard('e3')">Display Card E3</button> </br>
+        <button id="b4" class="button" onclick="displayCard('e4')">Display Card E4</button> </br>
+        <button id="b5" class="button" onclick="displayCard('f1')">Display Card F1</button> </br>
+        <button id="b6" class="button" onclick="displayCard('f2')">Display Card F2</button> </br>
+        <button id="b7" class="button" onclick="displayCard('f3')">Display Card F3</button> </br>
+        <button id="b8" class="button" onclick="displayCard('f4')">Display Card F4</button> </br>
+        <button id="bAll" class="button" onclick="displayAllCards()">Display all Cards</button>
+      </div>
+
       <div id="modal3" class="modal">
         <div id="modal3content" class="modal-content">
           <span class="close">&times;</span>
@@ -57,14 +71,14 @@
             <area id="c7" alt="card7" shape="poly" coords="574,291,622,284,672,291,672,444,574,444" href ="javascript:alert('Card not collected!');">
             <area id="c8" alt="card8" shape="poly" coords="732,291,778,284,831,291,831,444,732,444" href ="javascript:alert('Card not collected!');">
           </map>
-          <img id="e1" src="sources/E1.png" alt="Marie Curie">
-          <img id="e2" src="sources/E2.png" alt="Karoline Herschel">
-          <img id="e3" src="sources/E3.png" alt="Alexine Tinne">
-          <img id="e4" src="sources/E4.png" alt="Johanna Mestorf">
-          <img id="f1" src="sources/F1.png" alt="Judith">
-          <img id="f2" src="sources/F2.png" alt="Jeanne d'Arc">
-          <img id="f3" src="sources/F3.png" alt="Charlotte Corday">
-          <img id="f4" src="sources/F4.png" alt="Leonore Porchaska">
+          <img id="e1" class="card" src="sources/E1.png" alt="Marie Curie">
+          <img id="e2" class="card" src="sources/E2.png" alt="Karoline Herschel">
+          <img id="e3" class="card" src="sources/E3.png" alt="Alexine Tinne">
+          <img id="e4" class="card" src="sources/E4.png" alt="Johanna Mestorf">
+          <img id="f1" class="card" src="sources/F1.png" alt="Judith">
+          <img id="f2" class="card" src="sources/F2.png" alt="Jeanne d'Arc">
+          <img id="f3" class="card" src="sources/F3.png" alt="Charlotte Corday">
+          <img id="f4" class="card" src="sources/F4.png" alt="Leonore Porchaska">
 
           <div id="modal4" class="modal">
             <div class)"modal-content">
