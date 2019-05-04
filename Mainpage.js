@@ -1,6 +1,6 @@
 
 
-function displayModal(modalId,closeIndex){
+function displayModal(modalId,closeIndex=0){
   var modal = document.getElementById(modalId);
   var span = document.getElementsByClassName("close")[closeIndex];
   modal.style.display = "block";
@@ -14,15 +14,14 @@ function displayModal(modalId,closeIndex){
   }**/
 }
 
-function displayModalC(imgId){
-  var modal = document.getElementbyId("modal4");
-  var modalImg = document.getElementById("card");
-  var backgrModal= document.getElementById("modal3");
+function overlayOn(imgId){
+  var overlayImg = document.getElementById("card");
   var image = document.getElementById(imgId);
-  backgrModal.blur();
-  modal.focus();
-  modal.style.display = "block";
-  modalImg.src = image.src;
+  overlayImg.src = image.src;
+  displayModal("overlay");
+}
+function overlayOff(){
+  document.getElementById("overlay").style.display = "none";
 }
 
 function displayCard(cardId){
