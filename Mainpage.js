@@ -9,6 +9,8 @@ var cardAreas = {
   "f3":"574,291,622,284,672,291,672,444,574,444",
   "f4":"732,291,778,284,831,291,831,444,732,444"
 };
+var slideIndex = 0;
+slides=["sources/Marburger_Profs_Notiz.jpg","sources/Marburger_Profs_Folie.jpg","sources/Marburger_Profs_Foto.jpg"];
 
 
 function displayModal(modalId,closeIndex=0){
@@ -50,13 +52,40 @@ function createArea(areaId,cardId){
   area.href = "javascript:overlayOn('"+ cardId +"');";
 }
 
+function displayLightroom(){
+  var slideImg = document.getElementById("slideImg");
+  slideIndex = 0;
+  slideImg.src = slides[slideIndex];
+  displayModal("modal5", 5);
+}
+
+function plusSlides(){
+  var slideImg = document.getElementById("slideImg");
+  slideIndex++;
+  if(slideIndex >= 3){
+    slideIndex = 0;
+  }
+  slideImg.href = slides[slideIndex];
+  slideImg.style.display = "relative";
+}
+
+function minusSlides(){
+  var slideImg = document.getElementById("slideImg");
+  slideIndex--;
+  if(slideIndex < 0){
+    slideIndex = 2;
+  }
+  slideImg.href = slides[slideIndex];
+  slideImg.style.display = "relative";
+}
+
 /** just for testing**/
 function displayAllCards(){
   var cards = ["e1","e2","e3","e4","f1","f2","f3","f4"];
   cards.forEach(allCards);
   displayModal("modal3",3);
   alert("All cards displayed");
-  displayModal("ending",5);
+  displayModal("ending");
 }
 function allCards(value){
   var card = document.getElementById(value);
