@@ -21,9 +21,13 @@
 
       <img  id ="background" src="sources/Arbeitszimmer_mit_Stuhl.jpg" alt="Arbeitszimmer mit Stuhl" usemap="#mainMap">
       <map name="mainMap">
-        <area id="pinb" alt="pinboard" shape="poly" coords="27,87,370,83,372,267,35,269" href ="javascript:displayModal('modal1',1);">
-        <area id="index" alt="index" shape="poly" coords="455,227,498,255,456,321,415,295" href ="javascript:displayModal('modal2',2);">
+        <area id="pinb" alt="Pinboard" shape="poly" coords="27,87,370,83,372,267,35,269" href ="javascript:displayModal('modal1',1);">
+        <area id="index" alt="Index" shape="poly" coords="455,227,498,255,456,321,415,295" href ="javascript:displayModal('modal2',2);">
+        <area id="stack" alt="Papierstapel" shape="poly" coords="550,405,624,402,668,437,581,439" href ="javascript:displayModal('modal2',2);">
       </map>
+
+<!--Icons-->
+      <i id="icon" class="fas fa-book-open" alt="Go to Cardalbum" style="font-size:36px" onclick="displayModal('modal3',3)"></i>
 
       <div id="modal1" class="modal">
         <div class="modal-content">
@@ -38,8 +42,6 @@
           <p>Here could be the index</p>
         </div>
       </div>
-<!--Icons-->
-      <i id="icon" class="fas fa-book-open" alt="Go to Cardalbum" style="font-size:36px" onclick="displayModal('modal3',3)"></i>
 
 <!-- Buttons for tetsting card display -->
       <div id="testingButtons">
