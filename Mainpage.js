@@ -60,23 +60,33 @@ function displayLightroom(){
 }
 
 function plusSlides(){
-  var slideImg = document.getElementById("slideImg");
   slideIndex++;
   if(slideIndex >= 3){
     slideIndex = 0;
   }
-  slideImg.href = slides[slideIndex];
-  slideImg.style.display = "relative";
+  updateImage();
+
+}
+function updateImage(){
+    var image = document.getElementById("slideImg");
+    if(image.complete) {
+        var new_image = new Image();
+        //set up the new image
+        new_image.id = "slideImg";
+        new_image.src = slides[slideIndex];
+        // insert new image and remove old
+        image.parentNode.insertBefore(new_image,image);
+        image.parentNode.removeChild(image);
+    }
+    setTimeout(updateImage, 1000);
 }
 
 function minusSlides(){
-  var slideImg = document.getElementById("slideImg");
   slideIndex--;
   if(slideIndex < 0){
     slideIndex = 2;
   }
-  slideImg.href = slides[slideIndex];
-  slideImg.style.display = "relative";
+  updateImage();
 }
 
 /** just for testing**/
