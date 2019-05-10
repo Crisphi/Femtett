@@ -216,8 +216,6 @@ body{
 .prev,
 .next {
   cursor: pointer;
-  position: absolute;
-  top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
@@ -226,11 +224,20 @@ body{
   font-size: 20px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
+
+
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.prev{
+  float: left;
+}
+
+.next{
+  float: right;
 }
 
 .prev:hover,
