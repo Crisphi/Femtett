@@ -10,7 +10,7 @@ var cardAreas = {
   "f4":"732,291,778,284,831,291,831,444,732,444"
 };
 var slideIndex = 0;
-slides=["sources/Marburger_Profs_Notiz.jpg","sources/Marburger_Profs_Folie.jpg","sources/Marburger_Profs_Foto.jpg"];
+slides=["Sources/Marburger_Profs_Notiz.jpg","Sources/Marburger_Profs_Folie.jpg","Sources/Marburger_Profs_Foto.jpg"];
 
 
 function displayModal(modalId,closeIndex=0){
