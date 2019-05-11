@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charstet="utf-8">
+    <title>Femtett - Adventure Game</title>
+    <script src="Mainpage.js"></script>
+    <link rel="stylesheet" type="text/css" href="Mainpage.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  </head>
+  <body onload="displayModal('startTextModal',0)">
+
+    <div id="heading">
+      <h1>Femtett <br/> Adventure Game</h1>
+    </div>
+
+<!-- Buttons for tetsting card display -->
+      <div id="testingButtons">
+        <p>Buttons for testing</p>
+        <button id="be1" class="button" onclick="displayCard('c1','e1')">Display Card E1</button> </br>
+        <button id="be2" class="button" onclick="displayCard('c2','e2')">Display Card E2</button> </br>
+        <button id="be3" class="button" onclick="displayCard('c3','e3')">Display Card E3</button> </br>
+        <button id="be4" class="button" onclick="displayCard('c4','e4')">Display Card E4</button> </br>
+        <button id="bf1" class="button" onclick="displayCard('c5','f1')">Display Card F1</button> </br>
+        <button id="bf2" class="button" onclick="displayCard('c6','f2')">Display Card F2</button> </br>
+        <button id="bf3" class="button" onclick="displayCard('c7','f3')">Display Card F3</button> </br>
+        <button id="bf4" class="button" onclick="displayCard('c8','f4')">Display Card F4</button> </br>
+        <button id="bAll" class="button" onclick="displayAllCards()">Display all Cards</button> </br>
+        <button id="bol" class="button" onclick="overlayOn('e1')">Overlay on</button></br>
+        <button id="lightR" class="button" onclick="displayLightroom()">displayLightroom</button>
+        <!-- button for offline testing-->
+        <!--<button id="altButton" class="button" onclick="displayModal('modal3',2)">cardAlbum</button>-->
+      </div>
+
+    <div id="workspace">
+
+<!--IntroPopup-->
+      <div id="startTextModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Here could be the letter at the beginning of the adventure</p>
+        </div>
+      </div>
+<!--Background with clickable areas-->
+      <img  id ="background" src="Sources/Arbeitszimmer_mit_Stuhl.jpg" alt="Arbeitszimmer mit Stuhl" usemap="#mainMap">
+      <map name="mainMap">
+        <area id="pinb" alt="Pinboard" shape="poly" coords="27,87,370,83,372,267,35,269" href ="javascript:displayModal('modal1',1);">
+        <area id="index" alt="Index" shape="poly" coords="455,227,498,255,456,321,415,295" href ="javascript:displayModal('modal2',2);">
+        <area id="stack" alt="Papierstapel" shape="poly" coords="550,405,624,402,668,437,581,439" href ="javascript:displayLightroom();">
+        <area id="tel" alt="Telefon" shape="poly" coords="546,291,568,292,584,311,568,312,569,330,586,336,584,383,592,394,578,394,574,382,558,372,544,372,541,330,551,306,546,302" href ="javascript:displayModal('modal6',6);">
+      </map>
+
+<!--Icons-->
+      <i id="icon" class="fas fa-book-open" alt="Go to Cardalbum" style="font-size:36px" onclick="displayModal('modal3',3)"></i>
+
+<!--Pinboard-->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Here could be the picture of the pinboard</p>
+        </div>
+      </div>
+
+<!--Index-->
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Here could be the index</p>
+        </div>
+      </div>
+<!--Cardalbum-->
+      <div id="modal3" class="modal">
+        <div id="modal3content" class="modal-content">
+          <span class="close">&times;</span>
+          <img id="cardAlbum" src="Sources/Album_leer.png" alt="Kartenalbum" usemap="#albumMap">
+          <map name="albumMap">
+            <area id="c1" alt="card1" shape="poly">
+            <area id="c2" alt="card2" shape="poly">
+            <area id="c3" alt="card5" shape="poly">
+            <area id="c4" alt="card6" shape="poly">
+            <area id="c5" alt="card3" shape="poly">
+            <area id="c6" alt="card4" shape="poly">
+            <area id="c7" alt="card7" shape="poly">
+            <area id="c8" alt="card8" shape="poly">
+          </map>
+          <img id="e1" class="card" src="Sources/E1.png" alt="Marie Curie">
+          <img id="e2" class="card" src="Sources/E2.png" alt="Karoline Herschel">
+          <img id="e3" class="card" src="Sources/E3.png" alt="Alexine Tinne">
+          <img id="e4" class="card" src="Sources/E4.png" alt="Johanna Mestorf">
+          <img id="f1" class="card" src="Sources/F1.png" alt="Judith">
+          <img id="f2" class="card" src="Sources/F2.png" alt="Jeanne d'Arc">
+          <img id="f3" class="card" src="Sources/F3.png" alt="Charlotte Corday">
+          <img id="f4" class="card" src="Sources/F4.png" alt="Leonore Porchaska">
+        </div>
+      </div>
+<!-- Overlay for cards-->
+      <div id="cardOverlay" onclick="overlayOff('cardOverlay')">
+        <img id="card">
+      </div>
+
+      <div id="modal4" class="modal">
+        <div id="modal4content" class="modal-content">
+          <span class="close">&times;</span>
+          <p>Du hast eine Karte aufgesammelt!</p>
+        </div>
+      </div>
+<!--Marburger Professors-->
+      <div id="modal5" class="modal">
+        <div id="modal5content" class="modal-content">
+          <span class="close">&times;</span>
+          <div id="lightroom">
+            <a class="prev" onclick="minusSlides()">&#10094;</a>
+            <img id="slideImg" alt="Slide" href="">
+            <a class="next" onclick="plusSlides()">&#10095;</a>
+          </div>
+        </div>
+      </div>
+<!--Telephone-->
+      <div id="modal6" class="modal">
+        <div id="modal6content" class="modal-content">
+          <span class="close">&times;</span>
+          <img id="telImg" src="Sources/Telefon.png" alt="Telefon">
+          <form>
+            <input type="number" name="code" min="1" max="14">
+            <input type="number" name="code" min="1" max="14">
+            <input type="number" name="code" min="1" max="14">
+            <input type="number" name="code" min="1" max="14">
+          </form>
+        </div>
+      </div>
+<!-- Ending -->
+      <div id="ending" onclick="overlayOff('ending')">
+        <div id="endingContent">Here could be the ending</div>
+      </div>
+    </div>
+  </body>
+</html>
