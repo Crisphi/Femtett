@@ -79,7 +79,7 @@ body{
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.7);
 }
-#modal3content, #modal5content, #modal6content{
+#modal3content, #modal5content, #modal6content, #modal7content{
   background-color: Black;
   margin: 0.5%;
   padding: 10px;
