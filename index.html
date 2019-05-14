@@ -10,10 +10,6 @@
   </head>
   <body onload="start()">
 
-    <div id="heading">
-      <h1>Femtett <br/> Adventure Game</h1>
-    </div>
-
 <!-- Buttons for tetsting card display -->
       <div id="testingButtons">
         <p>Buttons for testing</p>
@@ -35,8 +31,28 @@
         <!--<button id="altButton" class="button" onclick="displayModal('modal3',2)">cardAlbum</button>-->
       </div>
 
-    <div id="workspace">
+      <div id="setup">
+        <table>
+          <tr>
+            <td id="heading">
+              <h1>Femtett <br/> Adventure Game</h1>
+            </td>
+            <td>
+        <!--Background with clickable areas-->
+              <img  id ="background" src="Sources/Arbeitszimmer_mit_Stuhl.jpg" alt="Arbeitszimmer mit Stuhl" usemap="#mainMap">
+              <map name="mainMap">
+                <area id="pinb" alt="Pinboard" shape="poly" coords="27,87,370,83,372,267,35,269" href ="javascript:displayModal('modal1',1);">
+                <area id="index" alt="Index" shape="poly" coords="455,227,498,255,456,321,415,295" href ="javascript:displayModal('modal2',2);">
+                <area id="stack" alt="Papierstapel" shape="poly" coords="550,405,624,402,668,437,581,439" href ="javascript:displayLightroom();">
+                <area id="tel" alt="Telefon" shape="poly" coords="546,291,568,292,584,311,568,312,569,330,586,336,584,383,592,394,578,394,574,382,558,372,544,372,541,330,551,306,546,302" href ="javascript:displayModal('modal6',6);">
+                <area id="desk" alt="Schreibtisch" shape="poly" coords="266,390,390,380,412,390,379,398,341,405,339,397,320,398,322,404,298,410" href ="javascript:displayModal('modal7',7);">
+              </map>
+            </td>
+          </tr>
+        </table>
+      </div>
 
+    <div id="workspace">
 <!--IntroPopup-->
       <div id="startTextModal" class="modal">
         <div id="startTextModal-content" class="modal-content">
@@ -47,16 +63,6 @@
           </div>
         </div>
       </div>
-<!--Background with clickable areas-->
-      <img  id ="background" src="Sources/Arbeitszimmer_mit_Stuhl.jpg" alt="Arbeitszimmer mit Stuhl" usemap="#mainMap">
-      <map name="mainMap">
-        <area id="pinb" alt="Pinboard" shape="poly" coords="27,87,370,83,372,267,35,269" href ="javascript:displayModal('modal1',1);">
-        <area id="index" alt="Index" shape="poly" coords="455,227,498,255,456,321,415,295" href ="javascript:displayModal('modal2',2);">
-        <area id="stack" alt="Papierstapel" shape="poly" coords="550,405,624,402,668,437,581,439" href ="javascript:displayLightroom();">
-        <area id="tel" alt="Telefon" shape="poly" coords="546,291,568,292,584,311,568,312,569,330,586,336,584,383,592,394,578,394,574,382,558,372,544,372,541,330,551,306,546,302" href ="javascript:displayModal('modal6',6);">
-        <area id="desk" alt="Schreibtisch" shape="poly" coords="266,390,390,380,412,390,379,398,341,405,339,397,320,398,322,404,298,410" href ="javascript:displayModal('modal7',7);">
-      </map>
-
 <!--Icons-->
       <i id="icon" class="fas fa-book-open" alt="Go to Cardalbum" style="font-size:36px" onclick="displayModal('modal3',3)"></i>
 
@@ -82,6 +88,7 @@
       <div id="modal3" class="modal">
         <div id="modal3content" class="modal-content">
           <span class="close">&times;</span>
+          <img id="albumBackg" src="Sources/Albumdoppelseite_freigestellt_background.png" alt="Hintergrund Kartenalbum" style="z-index: 1;">
           <img id="cardAlbum" src="Sources/Album_leer.png" alt="Kartenalbum" usemap="#albumMap">
           <map name="albumMap">
             <area id="c1" alt="card1" shape="poly">
@@ -93,14 +100,16 @@
             <area id="c7" alt="card7" shape="poly">
             <area id="c8" alt="card8" shape="poly">
           </map>
-          <img id="e1" class="card" src="Sources/E1.png" alt="Marie Curie">
-          <img id="e2" class="card" src="Sources/E2.png" alt="Karoline Herschel">
-          <img id="e3" class="card" src="Sources/E3.png" alt="Alexine Tinne">
-          <img id="e4" class="card" src="Sources/E4.png" alt="Johanna Mestorf">
-          <img id="f1" class="card" src="Sources/F1.png" alt="Judith">
-          <img id="f2" class="card" src="Sources/F2.png" alt="Jeanne d'Arc">
-          <img id="f3" class="card" src="Sources/F3.png" alt="Charlotte Corday">
-          <img id="f4" class="card" src="Sources/F4.png" alt="Leonore Porchaska">
+          <div id="albumImges">
+            <img id="e1" class="card" src="Sources/E1.png" alt="Marie Curie">
+            <img id="e2" class="card" src="Sources/E2.png" alt="Karoline Herschel">
+            <img id="e3" class="card" src="Sources/E3.png" alt="Alexine Tinne">
+            <img id="e4" class="card" src="Sources/E4.png" alt="Johanna Mestorf">
+            <img id="f1" class="card" src="Sources/F1.png" alt="Judith">
+            <img id="f2" class="card" src="Sources/F2.png" alt="Jeanne d'Arc">
+            <img id="f3" class="card" src="Sources/F3.png" alt="Charlotte Corday">
+            <img id="f4" class="card" src="Sources/F4.png" alt="Leonore Porchaska">
+          </div>
         </div>
       </div>
 <!-- Overlay for cards-->
@@ -157,8 +166,8 @@
 <!--Puzzle-->
       <div id="modal7" class="modal">
         <div id="modal7content" class="modal-content">
-          <span class="close">&times;</span>
-          <iframe src="puzzle/index.html" style="width:1200px; height:537px; border:none;"></iframe>
+          <span class="close" style="z-index: 5;">&times;</span>
+          <iframe id="puzzle" src="puzzle/index.html"></iframe>
         </div>
       </div>
 <!-- Ending -->

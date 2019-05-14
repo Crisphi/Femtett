@@ -7,16 +7,19 @@ body{
 
 #heading{
   float: left;
-  margin-left: 0px;
+  margin-left: 7px;
   margin-right: 10px;
+  width: 243px;
+  vertical-align: top;
+  margin-top: 7px;
 }
 
 #background{
+  position: absolute;
   width: 748px;
   height: 560.95px;
-  display:inline-block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 5px;
+  top: 0px;
 }
 
 #icon{
@@ -31,28 +34,6 @@ body{
   color: rgb(128, 0, 42);
   color: rgba(128, 0, 42,1)
 }
-
-/**.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
-}**/
-
-/**.modal-content {
-  background-color: black;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 40%;
-  text-align: center;
-}**/
 
 .close {
   color: #aaa;
@@ -69,26 +50,46 @@ body{
 
 .modal, #ending{
   display: none;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   left: 0;
   top: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.7);
 }
 .modal-content, #endingContent{
-  background-color: Black;
+  background-color: black;
   margin: 0.5%;
   padding: 10px;
   border: 1px solid #888;
-  width: auto;
+  width: 1000px;
+  height: 550px;
   text-align: center;
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  margin-left: -505px;
+
 }
 
+#modal7content{
+  width: 1235px;
+  margin-left: -630px;
+}
+
+#puzzle{
+  position: absolute;
+  width:1200px;
+  height:537px;
+  border:none;
+  top: 50%;
+  margin-top: -268.5px;
+  left:50%;
+  margin-left: -605px;
+}
 #modal4content {
   background-color: black;
   margin: 15% auto;
@@ -96,16 +97,23 @@ body{
   border: 1px solid #888;
   text-align: center;
   width: 25%;
+  height: auto;
 }
 
-#cardAlbum{
-  width: 75%;
-  height: auto;
+#cardAlbum, #albumBackg{
+  width: 934.4px;
+  height: 540.383px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  position:relative;
-  z-index: 2;
+  left:50%;
+  margin-left: -467.2px;
+  top:50%;
+  margin-top: -270.1915px;
+  position:absolute;
+  z-index: 3;
+}
+
+#albumImges{
+  position: absolute;
 }
 
 #e1{
@@ -114,7 +122,7 @@ body{
   left: 335px;
   width: auto;
   height: 170px;
-  z-index: 1;
+  z-index: 2;
   display: none;
 }
 #e2{
@@ -123,7 +131,7 @@ body{
   left: 495px;
   width: auto;
   height: 170px;
-  z-index: 1;
+  z-index: 2;
   display: none;
 }
 #f1{
@@ -132,7 +140,7 @@ body{
   left: 734px;
   width: auto;
   height: 170px;
-  z-index: 1;
+  z-index: 2;
   display: none;
 }
 #f2{
@@ -141,7 +149,7 @@ body{
   left: 890px;
   width: auto;
   height: 170px;
-  z-index: 1;
+  z-index: 2;
   display: none;
 }
 #e3{
@@ -150,7 +158,7 @@ body{
   left: 335px;
   width: auto;
   height: 170px;
-  z-index: 1;
+  z-index: 2;
   display: none;
 }
 #e4{
@@ -159,7 +167,7 @@ body{
   left: 495px;
   width: auto;
   height: 170px;
-  z-index: 1;
+  z-index: 2;
   display: none;
 }
 #f3{
@@ -168,7 +176,7 @@ body{
   left: 734px;
   width: auto;
   height: 170px;
-  z-index: 1;
+  z-index: 2;
   display: none;
 }
 #f4{
@@ -177,7 +185,7 @@ body{
   left: 890px;
   width: auto;
   height: 170px;
-  z-index: 1;
+  z-index: 2;
   display: none;
 }
 
