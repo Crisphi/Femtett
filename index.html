@@ -39,9 +39,12 @@
 
 <!--IntroPopup-->
       <div id="startTextModal" class="modal">
-        <div class="modal-content">
+        <div id="startTextModal-content" class="modal-content">
           <span class="close">&times;</span>
-          <p>Hallo <span id="name"></span>!</p>
+          <img id="introBackg" src="Sources/start_Brief_background.jpg" alt="Hintergrund Briefpapier">
+          <div id="introText">
+            <p>Hallo <span id="name"></span>!</p>
+          </div>
         </div>
       </div>
 <!--Background with clickable areas-->
@@ -59,9 +62,12 @@
 
 <!--Pinboard-->
       <div id="modal1" class="modal">
-        <div class="modal-content">
+        <div id="modal1content" class="modal-content">
           <span class="close">&times;</span>
-          <p>Here could be the picture of the pinboard</p>
+          <img id="mindmap" src="Sources/Mindmap.jpg" alt="Mindmap" usemap="#mindmapMap" style="height:550px;">
+          <map name="mindmapMap">
+            <area id="pin1" alt="Pin" shape="circle">
+          </map>
         </div>
       </div>
 
@@ -157,13 +163,16 @@
       </div>
 <!-- Ending -->
       <div id="ending">
-        <button type="button" onclick="overlayOff('ending')">Close</button>
         <div id="endingContent">
-          <form action="https://getsimpleform.com/messages?form_api_token=3c71bdaf6c4aecd4a09361eb8ce12632" method="post">
-            <input type='hidden' name='redirect_to' value='https://crisphi.github.io/Femtett/galery.html'/>
-            <input type="text" name="Name"/>
-            <input type="submit" value="Test"/>
-          </form>
+          <span id="endingClose" class="close">&times;</span>
+          <img id="endingBackg" alt="Hintergrund Briefpapier" src="Sources/start_Brief_background.jpg" style="height:550px;">
+          <div id="endingForm">
+            <form action="https://getsimpleform.com/messages?form_api_token=3c71bdaf6c4aecd4a09361eb8ce12632" method="post">
+              <input type='hidden' name='redirect_to' value='https://crisphi.github.io/Femtett/galery.html'/>
+              <input type="text" name="Name"/>
+              <input type="submit" value="Test"/>
+            </form>
+          </div>
         </div>
       </div>
     </div>

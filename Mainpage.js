@@ -111,7 +111,7 @@ function testPhone(){
     t2Value = "";
     t3Value = "";
     t4Value = "";
-    displayModal("ending");
+    displayModal("ending",8);
   }
 }
 
@@ -135,7 +135,7 @@ function displayAllCards(){
   cards.forEach(allCards);
   displayModal("modal3",3);
   alert("All cards displayed");
-  displayModal("ending");
+  displayModal("ending",8);
 }
 function allCards(value){
   var card = document.getElementById(value);
