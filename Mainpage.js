@@ -1,3 +1,5 @@
+
+/**Variables**/
 var cardCounter = 0;
 var cardAreas = {
   "e1":"176,70,221,60,274,70,274,226,176,226",
@@ -88,6 +90,44 @@ function minusSlides(){
   }
   updateImage();
 }
+
+
+/**Telephone**/
+
+function testPhone(){
+  var cor1 = 9;
+  var cor2 = 3;
+  var cor3 = 7;
+  var cor4 = 4;
+  var t1Value = document.getElementById("t1").value;
+  var t2Value = document.getElementById("t2").value;
+  var t3Value = document.getElementById("t3").value;
+  var t4Value = document.getElementById("t4").value;
+
+  if(cor1 == t1Value && cor2 == t2Value && cor3 == t3Value && cor4 == t4Value){
+    displayCard('c3','e3');
+  }else{
+    t1Value = "";
+    t2Value = "";
+    t3Value = "";
+    t4Value = "";
+    displayModal("ending");
+  }
+}
+
+function startForm(callback){
+  var tRaw;
+  tRaw = $.get("http://getsimpleform.com/messages.js?api_token=ae7d35930cdcfa49277ab0dffc59c09f",{}, function(response){$("#name").html(response[0].data.Name)}, 'jsonp', async = false);
+
+  /**for Testing**/
+  var tData = tRaw;
+  console.log(tData);
+}
+
+function start(){
+  $.when(startForm()).then(function(){displayModal('startTextModal',0)});
+}
+
 
 /** just for testing**/
 function displayAllCards(){
