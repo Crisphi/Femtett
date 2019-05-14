@@ -4,10 +4,11 @@
     <meta charstet="utf-8">
     <title>Femtett - Adventure Game</title>
     <script src="Mainpage.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" type="text/css" href="Mainpage.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
   </head>
-  <body onload="displayModal('startTextModal',0)">
+  <body onload="start()">
 
     <div id="heading">
       <h1>Femtett <br/> Adventure Game</h1>
@@ -26,7 +27,10 @@
         <button id="bf4" class="button" onclick="displayCard('c8','f4')">Display Card F4</button> </br>
         <button id="bAll" class="button" onclick="displayAllCards()">Display all Cards</button> </br>
         <button id="bol" class="button" onclick="overlayOn('e1')">Overlay on</button></br>
-        <button id="lightR" class="button" onclick="displayLightroom()">displayLightroom</button>
+        <button id="lightR" class="button" onclick="displayLightroom()">displayLightroom</button></br>
+        <button id="tend" class="button" onclick="startForm()">Test End</button> </br>
+        <button id="be1" class="button" onclick="start()">Display Start</button>
+
         <!-- button for offline testing-->
         <!--<button id="altButton" class="button" onclick="displayModal('modal3',2)">cardAlbum</button>-->
       </div>
@@ -37,7 +41,7 @@
       <div id="startTextModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <p>Here could be the letter at the beginning of the adventure</p>
+          <p>Hallo <span id="name"></span>!</p>
         </div>
       </div>
 <!--Background with clickable areas-->
@@ -97,7 +101,7 @@
       <div id="cardOverlay" onclick="overlayOff('cardOverlay')">
         <img id="card">
       </div>
-
+<!-- Pickup notification-->
       <div id="modal4" class="modal">
         <div id="modal4content" class="modal-content">
           <span class="close">&times;</span>
@@ -116,15 +120,30 @@
         </div>
       </div>
 <!--Telephone-->
+    <!--  <div id="modal6" class="modal">
+        <div id="modal6content" class="modal-content">
+          <span class="close">&times;</span>
+          <img id="telImg" src="Sources/Telefon.png" alt="Telefon">
+            <input id="t1" type="number" name="code" min="0" max="9">
+            <input id="t2" type="number" name="code" min="0" max="9">
+            <input id="t3" type="number" name="code" min="0" max="9">
+            <input id="t4" type="number" name="code" min="0" max="9">
+          <button class="button" onclick="testPhone()">Test</button>
+        </div>
+      </div>-->
+
       <div id="modal6" class="modal">
         <div id="modal6content" class="modal-content">
           <span class="close">&times;</span>
           <img id="telImg" src="Sources/Telefon.png" alt="Telefon">
-          <form>
-            <input type="number" name="code" min="1" max="14">
-            <input type="number" name="code" min="1" max="14">
-            <input type="number" name="code" min="1" max="14">
-            <input type="number" name="code" min="1" max="14">
+          <form action="https://getsimpleform.com/messages?form_api_token=3c71bdaf6c4aecd4a09361eb8ce12632" method="post">
+            <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+            <input type='hidden' name='redirect_to' value='https://crisphi.github.io/Femtett/'>
+            <input id="t1" type="number" name="code1" min="0" max="9">
+            <input id="t2" type="number" name="code2" min="0" max="9">
+            <input id="t3" type="number" name="code3" min="0" max="9">
+            <input id="t4" type="number" name="code4" min="0" max="9">
+            <input type='submit' value='Test form' />
           </form>
         </div>
       </div>
@@ -137,8 +156,15 @@
         </div>
       </div>
 <!-- Ending -->
-      <div id="ending" onclick="overlayOff('ending')">
-        <div id="endingContent">Here could be the ending</div>
+      <div id="ending">
+        <button type="button" onclick="overlayOff('ending')">Close</button>
+        <div id="endingContent">
+          <form action="https://getsimpleform.com/messages?form_api_token=3c71bdaf6c4aecd4a09361eb8ce12632" method="post">
+            <input type='hidden' name='redirect_to' value='https://crisphi.github.io/Femtett/galery.html'/>
+            <input type="text" name="Name"/>
+            <input type="submit" value="Test"/>
+          </form>
+        </div>
       </div>
     </div>
   </body>
