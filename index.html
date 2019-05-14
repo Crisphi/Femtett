@@ -10,7 +10,7 @@
   </head>
   <body onload="start()">
 
-<!-- Buttons for tetsting card display -->
+<!-- Buttons for testing card display -->
       <div id="testingButtons">
         <p>Buttons for testing</p>
         <button id="be1" class="button" onclick="displayCard('c1','e1')">Display Card E1</button> </br>
@@ -59,7 +59,31 @@
           <span class="close">&times;</span>
           <img id="introBackg" src="Sources/start_Brief_background.jpg" alt="Hintergrund Briefpapier">
           <div id="introText">
-            <p>Hallo <span id="name"></span>!</p>
+            <p>Verehrte Geschwister,</p>
+            <p>
+              ihr habt es also auch endlich bis hierher geschafft.
+              Ich bin mir sicher, dass eure Reise ebenso <span id="adj">Adjektiv</span> war wie meine. Großmutter liebte selbst das Abenteuer.
+              Nachdem sie ja als Wissenschaftlerin im Bereich <span id="wiss">Wissenschaft</span> arbeitete, hatte sie immer mit vielen Mysterien zu tun.
+              Sie wäre stolz auf euch.
+              Nun sollen ihre Rätsel bald zu einem Ende kommen.
+              Doch nicht bevor sie euch noch ein letztes Mal nach den Quartettkarten suchen lässt, mit denen wir als Kinder so gern gespielt haben.
+              Erinnert ihr euch? Überall hat sie sie versteckt.
+              Im Schrank <span id="richtung">links/rechts</span> im Flur, gleich wenn man rein kommt.
+              Oder im Garten. Dieser verrückte Garten.
+              Wisst ihr noch? Der war voll davon: <span id="gegenstand">Gegenstände</span>.
+              <span id="ausruf">Ausruf des Erstaunens</span>! Manchmal fanden wir die alten Karten auch nur in der Wiese beim <span id="aktiv">Aktivität</span>.
+              Und jedes Mal hat Großmutter sie wieder für uns versteckt. Manchmal sogar <span id="zahl">Zahl</span> mal am Tag.
+            </p>
+            <p>
+              Vielleicht sollen diese, ihre letzten Rätsel, uns etwas sagen, uns möglicherweise ihr Lebenswerk näher bringen. Doch das müsst ihr für euch selbst herausfinden.
+            </p>
+            <p>
+              Und nun viel Vergnügen bei der Suche!
+            </p>
+            <p>
+              In Liebe,</br><span id="name"></span>
+
+            </p>
           </div>
         </div>
       </div>
@@ -178,7 +202,24 @@
           <div id="endingForm">
             <form action="https://getsimpleform.com/messages?form_api_token=3c71bdaf6c4aecd4a09361eb8ce12632" method="post">
               <input type='hidden' name='redirect_to' value='https://crisphi.github.io/Femtett/galery.html'/>
-              <input type="text" name="Name"/>
+              Wie heißt du?</br>
+              <input type="text" name="Name"/></br>
+              In welchem Wissenschaftsbereich forscht dein/e AbenteurerIn?</br>
+              <input type="text" name="Wissenschaft"/></br>
+              Mit welchem Adjektiv würdest du diese Reise beschreiben?</br>
+              <input type="text" name="Adjektiv"/></br>
+              Nenne eine Aktivität, die man im Freien unternimmt</br>
+              <input type="text" name="Aktivitaet"/></br>
+              Du bist in einem Dungeon. Links und Rechts geht ein Gang entlang. Welchen nimmst du?</br>
+              <input type="radio" name="Richtung" value="links"/>Links</br>
+              <input type="radio" name="Richtung" value="rechts"/>Rechts</br>
+              Gegenstände in der Mehrzahl</br>
+              <input type="text" name="Gegenstand"/></br>
+              Was rufst du, wenn du einen dreiköpfigen Affen siehst?</br>
+              <input type="text" name="Ausruf"/></br>
+              Schnell, würfel Initiative!</br>
+              <i class='fas fa-dice-d20' style='font-size:36px'></i></br>
+              <input type="hidden" name="Zahl"/></br>
               <input type="submit" value="Test"/>
             </form>
           </div>
