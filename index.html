@@ -82,7 +82,6 @@
             </p>
             <p>
               In Liebe,</br><span id="name"></span>
-
             </p>
           </div>
         </div>
@@ -218,8 +217,8 @@
               Was rufst du, wenn du einen dreiköpfigen Affen siehst?</br>
               <input type="text" name="Ausruf"/></br>
               Schnell, würfel Initiative!</br>
-              <i class='fas fa-dice-d20' style='font-size:36px'></i></br>
-              <input type="hidden" name="Zahl"/></br>
+              <i class='fas fa-dice-d20' style='font-size:36px' onclick='randomNumber()'></i><span> = <span id="randomRes"></span></span></br>
+              <input id="rZahl" type="hidden" name="Zahl"/></br>
               <input type="submit" value="Test"/>
             </form>
           </div>

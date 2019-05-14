@@ -115,9 +115,25 @@ function testPhone(){
   }
 }
 
+function randomNumber(){
+  var numb = Math.floor((Math.random()*20)+1);
+  console.log(numb);
+  $("#randomRes").html(numb);
+  document.getElementById("rZahl").value = numb;
+}
+
 function startForm(callback){
   var tRaw;
-  tRaw = $.get("http://getsimpleform.com/messages.js?api_token=ae7d35930cdcfa49277ab0dffc59c09f",{}, function(response){$("#name").html(response[0].data.Name)}, 'jsonp', async = false);
+  tRaw = $.get("http://getsimpleform.com/messages.js?api_token=ae7d35930cdcfa49277ab0dffc59c09f",{}, function(response){
+    $("#adj").html(response[0].data.Adjektiv);
+    $("#wiss").html(response[0].data.Wissenschaft);
+    $("#richtung").html(response[0].data.Richtung);
+    $("#gegenstand").html(response[0].data.Gegenstand);
+    $("#ausruf").html(response[0].data.Ausruf);
+    $("#aktiv").html(response[0].data.Aktivitaet);
+    $("#zahl").html(response[0].data.Zahl);
+    $("#name").html(response[0].data.Name);
+  }, 'jsonp', async = false);
 
   /**for Testing**/
   var tData = tRaw;
