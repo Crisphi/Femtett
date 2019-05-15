@@ -96,6 +96,13 @@ function updateImage(){
         //set up the new image
         new_image.id = "slideImg";
         new_image.src = slides[slideIndex];
+        new_image.usemap = "#lightMap";
+
+        if(slideIndex == 1){
+          createArea("lightArea1","slideImg","zoomed","zoomOverlay");
+        }else if (slideIndex == 2) {
+          createArea("lightArea2","slideImg","zoomed","zoomOverlay");
+        }
         // insert new image and remove old
         image.parentNode.insertBefore(new_image,image);
         image.parentNode.removeChild(image);
