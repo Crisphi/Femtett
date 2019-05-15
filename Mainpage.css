@@ -96,8 +96,10 @@ body{
   padding: 20px;
   border: 1px solid #888;
   text-align: center;
-  width: 25%;
+  width: 306px;
   height: auto;
+  left: 50%;
+  margin-left: -153px;
 }
 
 #cardAlbum, #albumBackg{
