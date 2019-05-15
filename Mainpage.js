@@ -176,7 +176,7 @@ function randomNumber(){
 
 function startForm(callback){
   var tRaw;
-  tRaw = $.get("http://getsimpleform.com/messages.js?api_token=ae7d35930cdcfa49277ab0dffc59c09f",{}, function(response){
+  tRaw = $.get("https://getsimpleform.com/messages.js?api_token=83616c2d07981a59b557c634837b419d",{}, function(response){
     $("#adj").html(response[0].data.Adjektiv);
     $("#wiss").html(response[0].data.Wissenschaft);
     $("#richtung").html(response[0].data.Richtung);
