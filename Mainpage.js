@@ -11,7 +11,7 @@ var cardAreas = {
   "f3":"574,291,622,284,672,291,672,444,574,444",
   "f4":"732,291,778,284,831,291,831,444,732,444"
 };
-var zoomMindmap = {
+var zoomSrc = {
   "b1Clip":{"margin-left": "-100px", "margin-top": "-320px", "transform": "scale(0.9,0.9)"},
   "b2Clip":{"margin-left": "-349px", "margin-top": "-750px", "transform": "scale(1.1,1.1)"},
   "b3Clip":{"margin-left": "-430px", "margin-top": "-100px", "transform": "scale(1.1,1.1)"},
@@ -61,9 +61,9 @@ function displayCard(areaId,cardId){
 
 function displayZoom(imgId, ovImg, overlay){
   var zoomed = document.getElementById("zoomed");
-  zoomed.style.marginLeft = zoomMindmap[imgId]["margin-left"];
-  zoomed.style.marginTop = zoomMindmap[imgId]["margin-top"];
-  zoomed.style.transform = zoomMindmap[imgId]["transform"];
+  zoomed.style.marginLeft = zoomSrc[imgId]["margin-left"];
+  zoomed.style.marginTop = zoomSrc[imgId]["margin-top"];
+  zoomed.style.transform = zoomSrc[imgId]["transform"];
   overlayOn(imgId, ovImg, overlay);
 }
 

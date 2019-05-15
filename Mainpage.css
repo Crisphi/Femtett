@@ -264,7 +264,6 @@ body{
   cursor: pointer;
   width: auto;
   padding: 16px;
-  margin-top: -50px;
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -278,14 +277,18 @@ body{
   transform: translateY(-50%);
 }
 
+.lightElem{
+  display: inline-block;
+}
+
 .prev{
   float: left;
+  margin-left: -42.65px;
 }
 
 .next{
   float: right;
 }
-
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
@@ -299,22 +302,22 @@ body{
     right:0;
 }
 
-a:link {
+.aIndex:link {
   color: rgb(128, 0, 42);
   text-decoration: none;
 }
 
-a:visited {
+.aIndex:visited {
   color: SlateBlue;
   text-decoration: none;
 }
 
-a:hover {
+.aIndex:hover {
   color: rgb(128, 0, 42);
   text-decoration: underline;
 }
 
-a:active {
+.aIndex:active {
   color: rgb(128, 0, 42);
   text-decoration: underline;
 }
