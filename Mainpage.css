@@ -276,10 +276,5 @@ body{
 }
 
 #indexText{
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-23%, -50%);
   text-align: left;
-  color: white;
 }
