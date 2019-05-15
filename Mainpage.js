@@ -11,6 +11,18 @@ var cardAreas = {
   "f3":"574,291,622,284,672,291,672,444,574,444",
   "f4":"732,291,778,284,831,291,831,444,732,444"
 };
+var zoomMindmap = {
+  "b1Clip":{"margin-left": "-100px", "margin-top": "-320px", "transform": "scale(0.9,0.9)"},
+  "b2Clip":{"margin-left": "-349px", "margin-top": "-750px", "transform": "scale(1.1,1.1)"},
+  "b3Clip":{"margin-left": "-430px", "margin-top": "-100px", "transform": "scale(1.1,1.1)"},
+  "b4Clip":{"margin-left": "-1000px", "margin-top": "-350px", "transform": "scale(1,1)"},
+  "com1Clip":{"margin-left": "100px", "margin-top": "-800px", "transform": "scale(1.1,1.1)"},
+  "com2Clip":{"margin-left": "-349px", "margin-top": "-450px", "transform": "scale(1.1,1.1)"},
+  "com3Clip":{"margin-left": "-900px", "margin-top": "-100px", "transform": "scale(1.1,1.1)"},
+  "com4Clip":{"margin-left": "-1000px", "margin-top": "-650px", "transform": "scale(1,1)"},
+  "noteClip":{"margin-left": "-800px", "margin-top": "-650px", "transform": "scale(1,1)"},
+
+};
 var slideIndex = 0;
 slides=["Sources/Marburger_Profs_Notiz.jpg","Sources/Marburger_Profs_Folie.jpg","Sources/Marburger_Profs_Foto.jpg"];
 
@@ -45,6 +57,14 @@ function displayCard(areaId,cardId){
   if(cardCounter == 8){
     displayModal("ending");
   }
+}
+
+function displayZoom(imgId, ovImg, overlay){
+  var zoomed = document.getElementById("zoomed");
+  zoomed.style.marginLeft = zoomMindmap[imgId]["margin-left"];
+  zoomed.style.marginTop = zoomMindmap[imgId]["margin-top"];
+  zoomed.style.transform = zoomMindmap[imgId]["transform"];
+  overlayOn(imgId, ovImg, overlay);
 }
 
 function createArea(areaId,cardId){

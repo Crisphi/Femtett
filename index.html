@@ -99,23 +99,21 @@
             <area id="pin2" alt="Pin" shape="circle" coords="270.5,328.5,11.5" href="javascript:displayModal('modal1',1);">
             <area id="pin3" alt="Pin" shape="circle" coords="433.5,113.5,11.5" href="javascript:displayModal('modal1',1);">
             <area id="pin4" alt="Pin" shape="circle" coords="595.5,347.5,11.5" href="javascript:displayModal('modal1',1);">
-            <area id="b1" alt="Bild1" shape="poly" coords="35,136,181,123,198,301,51,313" href ="javascript:overlayOn('b1Clip','zoomed','zoomOverlay');">
-            <area id="b2" alt="Bild2" shape="poly" coords="257,344,353,352,346,452,251,448" href ="javascript:overlayOn('b2Clip','zoomed','zoomOverlay');">
-            <area id="b3" alt="Bild3" shape="poly" coords="298,99,414,102,416,196,298,197" href ="javascript:overlayOn('b3Clip','zoomed','zoomOverlay');">
-            <area id="b4" alt="Bild4" shape="poly" coords="588,206,649,204,654,300,592,304" href ="javascript:overlayOn('b4Clip','zoomed','zoomOverlay');">
-            <area id="com1" alt="Kommentar1" shape="poly" coords="63,377,200,390,193,467,54,452" href ="javascript:overlayOn('com1Clip','zoomed','zoomOverlay');">
-            <area id="com2" alt="Kommentar2" shape="poly" coords="243,229,380,223,386,304,245,303" href ="javascript:overlayOn('com2Clip','zoomed','zoomOverlay');">
-            <area id="com3" alt="Kommentar3" shape="poly" coords="455,102,564,88,576,184,553,184,555,196,444,208" href ="javascript:overlayOn('com3Clip','zoomed','zoomOverlay');">
-            <area id="com4" alt="Kommentar4" shape="poly" coords="618,342,715,348,712,454,576,446,580,372,615,366" href ="javascript:overlayOn('com4Clip','zoomed','zoomOverlay');">
-            <area id="note" alt="Notiz" shape="poly" coords="394,302,550,312,550,363,533,369,533,416,394,414,390,358" href ="javascript:overlayOn('noteClip','zoomed','zoomOverlay');">
+            <area id="b1" alt="Bild1" shape="poly" coords="35,136,181,123,198,301,51,313" href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
+            <area id="b2" alt="Bild2" shape="poly" coords="257,344,353,352,346,452,251,448" href ="javascript:displayZoom('b2Clip','zoomed','zoomOverlay');">
+            <area id="b3" alt="Bild3" shape="poly" coords="298,99,414,102,416,196,298,197" href ="javascript:displayZoom('b3Clip','zoomed','zoomOverlay');">
+            <area id="b4" alt="Bild4" shape="poly" coords="588,206,649,204,654,300,592,304" href ="javascript:displayZoom('b4Clip','zoomed','zoomOverlay');">
+            <area id="com1" alt="Kommentar1" shape="poly" coords="63,377,200,390,193,467,54,452" href ="javascript:displayZoom('com1Clip','zoomed','zoomOverlay');">
+            <area id="com2" alt="Kommentar2" shape="poly" coords="243,229,380,223,386,304,245,303" href ="javascript:displayZoom('com2Clip','zoomed','zoomOverlay');">
+            <area id="com3" alt="Kommentar3" shape="poly" coords="455,102,564,88,576,184,553,184,555,196,444,208" href ="javascript:displayZoom('com3Clip','zoomed','zoomOverlay');">
+            <area id="com4" alt="Kommentar4" shape="poly" coords="618,342,715,348,712,454,576,446,580,372,615,366" href ="javascript:displayZoom('com4Clip','zoomed','zoomOverlay');">
+            <area id="note" alt="Notiz" shape="poly" coords="394,302,550,312,550,363,533,369,533,416,394,414,390,358" href ="javascript:displayZoom('noteClip','zoomed','zoomOverlay');">
             <area id="f2area" alt="Karte F2" shape="poly" coords="201,207,220,188,231,226,223,233" href ="javascript:displayCard('c6','f2');">
             <area id="e2area" alt="karte E2" shape="poly" coords="537,374,558,374,558,409,538,408" href ="javascript:displayCard('c2','e2');">
           </map>
 
           <div id="mindmapZoom">
-            <div id=b1Div>
-              <img id="b1Clip" class="imgZoom" src="Sources/Mindmap.jpg" style="height:550px;">
-            </div>
+            <img id="b1Clip" class="imgZoom" src="Sources/Mindmap.jpg">
             <img id="b2Clip" class="imgZoom" src="Sources/Mindmap.jpg">
             <img id="b3Clip" class="imgZoom" src="Sources/Mindmap.jpg">
             <img id="b4Clip" class="imgZoom" src="Sources/Mindmap.jpg">
