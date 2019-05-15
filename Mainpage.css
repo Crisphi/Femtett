@@ -191,7 +191,7 @@ body{
   display: none;
 }
 
-#cardOverlay{
+#cardOverlay, #zoomOverlay{
   position: fixed;
   display: none;
   width: 100%;
@@ -231,6 +231,41 @@ body{
   text-align: left;
   color: black;
   font-weight: bold;
+}
+
+/**Pinboard Zoom**/
+.imgZoom{
+  display: none;
+  position: absolute;
+  overflow: hidden;
+}
+
+#b1Clip{
+  clip: rect(0,120,80px, 0);
+}
+#b2Clip{
+  clip: rect(0,120,80px, 0);
+}
+#b3Clip{
+  clip: rect(0,120,80px, 0);
+}
+#b4Clip{
+  clip: rect(0,120,80px, 0);
+}
+#com1Clip{
+  clip: rect(0,120,80px, 0);
+}
+#com2Clip{
+  clip: rect(0,120,80px, 0);
+}
+#com3Clip{
+  clip: rect(0,120,80px, 0);
+}
+#com4Clip{
+  clip: rect(0,120,80px, 0);
+}
+#noteClip{
+  clip: rect(0,120,80px, 0);
 }
 
 

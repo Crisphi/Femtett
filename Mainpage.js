@@ -25,11 +25,11 @@ function displayModal(modalId,closeIndex=0){
   }
 }
 
-function overlayOn(imgId){
-  var overlayImg = document.getElementById("card");
+function overlayOn(imgId, ovImg, overlay){
+  var overlayImg = document.getElementById(ovImg);
   var image = document.getElementById(imgId);
   overlayImg.src = image.src;
-  displayModal("cardOverlay");
+  displayModal(overlay);
 }
 function overlayOff(ovId){
   document.getElementById(ovId).style.display = "none";
@@ -51,7 +51,7 @@ function createArea(areaId,cardId){
   var coords =  cardAreas[cardId];
   var area = document.getElementById(areaId);
   area.coords = coords;
-  area.href = "javascript:overlayOn('"+ cardId +"');";
+  area.href = "javascript:overlayOn('"+ cardId+ "','card','cardOverlay');";
 }
 
 function displayLightroom(){
