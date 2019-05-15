@@ -233,6 +233,15 @@ body{
   font-weight: bold;
 }
 
+#indexText{
+  text-align: left;
+}
+
+#modal2Content{
+  overflow: auto;
+}
+
+
 /**Pinboard Zoom**/
 .imgZoom{
   display: none;
