@@ -318,3 +318,23 @@ body{
     top: 0;
     right:0;
 }
+
+a:link {
+  color: rgb(128, 0, 42);
+  text-decoration: none;
+}
+
+a:visited {
+  color: SlateBlue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(128, 0, 42);
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(128, 0, 42);
+  text-decoration: underline;
+}
