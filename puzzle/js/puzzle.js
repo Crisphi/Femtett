@@ -399,3 +399,8 @@ const gameBoard = {
         }
     }
 };
+
+document.getElementById('shuffle').addEventListener('click', function () {
+    gameBoard.scramblePieces();
+    gameBoard.redraw();
+});
