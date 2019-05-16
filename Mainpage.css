@@ -28,10 +28,22 @@ body{
   left:696px;
   top:107px;
 }
+#f2R{
+  position: absolute;
+  left: 227px;
+  top: 89.5px;
+  transform: scale(0.21,0.21);
+}
 #f3R{
   position: absolute;
   left: 259px;
   top: 388.5px;
+}
+#e2R{
+  position: absolute;
+  left: 598.9px;
+  top: 303.3px;
+  transform: scale(0.21,0.21);
 }
 #e4R{
   position: absolute;
@@ -106,6 +118,15 @@ body{
   margin-top: -268.5px;
   left:50%;
   margin-left: -605px;
+}
+
+#finPuzzleImg{
+  position: absolute;
+  width: 642px;
+  height: 473px;
+  left: 303px;
+  top: 49px;
+  display: none;
 }
 #modal4content {
   background-color: black;

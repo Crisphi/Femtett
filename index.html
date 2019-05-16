@@ -26,6 +26,7 @@
         <button id="lightR" class="button" onclick="displayLightroom()">displayLightroom</button></br>
         <button id="tend" class="button" onclick="startForm()">Test End</button> </br>
         <button id="be1" class="button" onclick="start()">Display Start</button>
+        <button id="be1" class="button" onclick="document.getElementById('finPuzzleImg').style.display = 'block';">Display Puzzlefin</button>
 
         <!-- button for offline testing-->
         <!--<button id="altButton" class="button" onclick="displayModal('modal3',2)">cardAlbum</button>-->
@@ -129,7 +130,6 @@
             <area id="f2area" alt="Karte F2" shape="poly" coords="201,207,220,188,231,226,223,233" href ="javascript:displayCard('c6','f2');">
             <area id="e2area" alt="karte E2" shape="poly" coords="537,374,558,374,558,409,538,408" href ="javascript:displayCard('c2','e2');">
           </map>-->
-
           <div id="mindmapZoom">
             <img id="b1Clip" class="imgZoom" src="Sources/Mindmap.jpg">
             <img id="b2Clip" class="imgZoom" src="Sources/Mindmap.jpg">
@@ -141,7 +141,6 @@
             <img id="com4Clip" class="imgZoom" src="Sources/Mindmap.jpg">
             <img id="noteClip" class="imgZoom" src="Sources/Mindmap.jpg">
           </div>
-
           <div id="lineDiv">
             <svg id="lines" height="550" width="733.2">
               <line id="line1" x1="90" y1="355" x2="426" y2="121" style="stroke:rgb(255,0,0);stroke-width:2" />
@@ -200,6 +199,15 @@
             </svg>
           </div>
 
+          <!--Cards in mindmap-->
+          <img id ="f2R" src="Sources/F2_R.png" alt="F2 im Bild" usemap="#f2Rmap">
+          <map name="f2Rmap">
+            <area id="f2Rarea" alt="Area von F2 im Bild" shape="poly" coords="243,134.5,262,115.5,273,153.5,265,160.5" href ="javascript:displayCard('c6','f2','f2Rarea','f2R');">
+          </map>
+          <img id ="e2R" src="Sources/E2_R.png" alt="E2 im Bild" usemap="#e2Rmap">
+          <map name="e2Rmap">
+            <area id="e2Rarea" alt="Area von E2 im Bild" shape="poly" coords="207.1,87.7,228.1,87.7,228.1,122.7,208.1,121.7" href ="javascript:displayCard('c2','e2','e2Rarea','e2R');">
+          </map>
         </div>
       </div>
 
@@ -366,6 +374,7 @@
         <div id="modal7content" class="modal-content">
           <span class="close" style="z-index: 5;">&times;</span>
           <iframe id="puzzle" src="puzzle/index.html"></iframe>
+          <img id="finPuzzleImg" src="puzzle/images/zoo_complet.png">
         </div>
       </div>
 <!-- Ending -->

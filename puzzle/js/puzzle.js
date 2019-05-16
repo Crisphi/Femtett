@@ -173,13 +173,6 @@ const gameBoard = {
         document.getElementById('startBtn').addEventListener('click', function () {
             document.getElementById('instructions').style.display = 'none';
         });
-        document.getElementById('playagainBtn').addEventListener('click', function () {
-            let congratsDiv = document.getElementById('congrats');
-            congratsDiv.style.display = 'none';
-            congratsDiv.classList.remove('slidedown');
-            gameBoard.scramblePieces();
-            gameBoard.redraw();
-        });
     },
 
     // Initiate the playing areas (space for scrambled pieces, and the actual puzzle board)
@@ -199,10 +192,10 @@ const gameBoard = {
     },
 
     doWinShow: function () {
-        // Player has won, do something to show this
-        let congratsDiv = document.getElementById('congrats');
-        congratsDiv.style.display = 'block';
-        congratsDiv.classList.add('slidedown');
+      parent.document.getElementById('finPuzzleImg').style.display = "block";
+      document.getElementById('game-board').style.opacity = "0.0";
+      parent.document.getElementById('modal7').style.display = 'none';
+      parent.displayCard('c6','f2','f2Rarea','f2R');
     },
 
     // Since each puzzle slot is stationary where it should be, stroke a line around each.
