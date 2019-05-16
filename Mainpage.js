@@ -53,11 +53,14 @@ function overlayOff(ovId){
   document.getElementById(ovId).style.display = "none";
 }
 
-function displayCard(areaId,cardId){
+function displayCard(areaId,cardId,areaR="",cardR=""){
   var card = document.getElementById(cardId);
   card.style.display = "inline";
   displayModal("modal4",4);
   displayModal("modal3",3);
+  document.getElementById(cardR).style.display = "none";
+  document.getElementById(areaR).coords = "";
+  document.getElementById(areaR).href = "";
   cardCounter++;
   createArea(areaId,cardId);
   if(cardCounter == 8){

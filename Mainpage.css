@@ -20,6 +20,23 @@ body{
   height: 560.95px;
   margin-top: 5px;
   top: 0px;
+  z-index: -5;
+}
+
+#f1R{
+  position: absolute;
+  left:696px;
+  top:107px;
+}
+#f3R{
+  position: absolute;
+  left: 259px;
+  top: 388.5px;
+}
+#e4R{
+  position: absolute;
+  left: 902px;
+  top: 307px;
 }
 
 #icon{
