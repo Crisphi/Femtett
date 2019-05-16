@@ -93,24 +93,28 @@
       <div id="modal1" class="modal">
         <div id="modal1content" class="modal-content">
           <span class="close">&times;</span>
-          <img id="mindmap" src="Sources/Mindmap.jpg" alt="Mindmap" usemap="#mindmapMap" style="height:550px;">
-          <map name="mindmapMap">
+          <img id="mindmap" src="Sources/Mindmap.jpg" alt="Mindmap" style="height:550px;"> <!--usemap="#mindmapMap"-->
+          <!--<map name="mindmapMap">
             <area id="pin1" alt="Pin" shape="circle" coords="79.5,359.5,11.5" href="javascript:displayModal('modal1',1);">
             <area id="pin2" alt="Pin" shape="circle" coords="270.5,328.5,11.5" href="javascript:displayModal('modal1',1);">
             <area id="pin3" alt="Pin" shape="circle" coords="433.5,113.5,11.5" href="javascript:displayModal('modal1',1);">
             <area id="pin4" alt="Pin" shape="circle" coords="595.5,347.5,11.5" href="javascript:displayModal('modal1',1);">
+
             <area id="b1" alt="Bild1" shape="poly" coords="35,136,181,123,198,301,51,313" href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
             <area id="b2" alt="Bild2" shape="poly" coords="257,344,353,352,346,452,251,448" href ="javascript:displayZoom('b2Clip','zoomed','zoomOverlay');">
             <area id="b3" alt="Bild3" shape="poly" coords="298,99,414,102,416,196,298,197" href ="javascript:displayZoom('b3Clip','zoomed','zoomOverlay');">
             <area id="b4" alt="Bild4" shape="poly" coords="588,206,649,204,654,300,592,304" href ="javascript:displayZoom('b4Clip','zoomed','zoomOverlay');">
+
             <area id="com1" alt="Kommentar1" shape="poly" coords="63,377,200,390,193,467,54,452" href ="javascript:displayZoom('com1Clip','zoomed','zoomOverlay');">
             <area id="com2" alt="Kommentar2" shape="poly" coords="243,229,380,223,386,304,245,303" href ="javascript:displayZoom('com2Clip','zoomed','zoomOverlay');">
             <area id="com3" alt="Kommentar3" shape="poly" coords="455,102,564,88,576,184,553,184,555,196,444,208" href ="javascript:displayZoom('com3Clip','zoomed','zoomOverlay');">
             <area id="com4" alt="Kommentar4" shape="poly" coords="618,342,715,348,712,454,576,446,580,372,615,366" href ="javascript:displayZoom('com4Clip','zoomed','zoomOverlay');">
+
             <area id="note" alt="Notiz" shape="poly" coords="394,302,550,312,550,363,533,369,533,416,394,414,390,358" href ="javascript:displayZoom('noteClip','zoomed','zoomOverlay');">
+
             <area id="f2area" alt="Karte F2" shape="poly" coords="201,207,220,188,231,226,223,233" href ="javascript:displayCard('c6','f2');">
             <area id="e2area" alt="karte E2" shape="poly" coords="537,374,558,374,558,409,538,408" href ="javascript:displayCard('c2','e2');">
-          </map>
+          </map>-->
 
           <div id="mindmapZoom">
             <img id="b1Clip" class="imgZoom" src="Sources/Mindmap.jpg">
@@ -122,6 +126,64 @@
             <img id="com3Clip" class="imgZoom" src="Sources/Mindmap.jpg">
             <img id="com4Clip" class="imgZoom" src="Sources/Mindmap.jpg">
             <img id="noteClip" class="imgZoom" src="Sources/Mindmap.jpg">
+          </div>
+
+          <div id="lineDiv">
+            <svg id="lines" height="550" width="733.2">
+              <line id="line1" x1="90" y1="355" x2="426" y2="121" style="stroke:rgb(255,0,0);stroke-width:2" />
+              <line id="line2" x1="428" y1="122" x2="276" y2="321" style="stroke:rgb(255,0,0);stroke-width:2" />
+              <line id="line3" x1="280" y1="332" x2="584" y2="349" style="stroke:rgb(255,0,0);stroke-width:2" />
+
+              <a href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
+                <polygon points="35,136,181,123,198,301,51,313" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
+              <a href ="javascript:displayZoom('b2Clip','zoomed','zoomOverlay');">
+                <polygon points="257,344,353,352,346,452,251,448" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
+              <a href ="javascript:displayZoom('b3Clip','zoomed','zoomOverlay');">
+                <polygon points="298,99,414,102,416,196,298,197" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
+              <a href ="javascript:displayZoom('b4Clip','zoomed','zoomOverlay');">
+                <polygon points="588,206,649,204,654,300,592,304" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
+
+              <a href ="javascript:displayZoom('com1Clip','zoomed','zoomOverlay');">
+                <polygon points="63,377,200,390,193,467,54,452" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
+              <a href ="javascript:displayZoom('com2Clip','zoomed','zoomOverlay');">
+                <polygon points="243,229,380,223,386,304,245,303" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
+              <a href ="javascript:displayZoom('com3Clip','zoomed','zoomOverlay');">
+                <polygon points="455,102,564,88,576,184,553,184,555,196,444,208" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
+              <a href ="javascript:displayZoom('com4Clip','zoomed','zoomOverlay');">
+                <polygon points="618,342,715,348,712,454,576,446,580,372,615,366" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
+
+              <a href ="javascript:displayZoom('noteClip','zoomed','zoomOverlay');">
+                <polygon points="2394,302,550,312,550,363,533,369,533,416,394,414,390,358" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
+
+              <a href ="javascript:displayCard('c6','f2');">
+                <polygon points="201,207,220,188,231,226,223,233" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
+              <a href ="javascript:displayCard('c2','e2');">
+                <polygon points="537,374,558,374,558,409,538,408" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
+
+              <a href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
+                <circle cx="79.5" cy="359.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
+              </a>
+              <a href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
+                <circle cx="433.5" cy="113.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
+              </a>
+              <a href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
+                <circle cx="270.5" cy="328.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
+              </a>
+              <a href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
+                <circle cx="595.5" cy="347.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
+              </a>
+            </svg>
           </div>
 
         </div>
