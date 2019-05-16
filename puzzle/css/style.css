@@ -93,7 +93,7 @@ body {
 }
 
 .button {
-  background-color: black;
+  background-color: rgb(128, 0, 42);
   border: none;
   color: white;
   padding: 15px 32px;
