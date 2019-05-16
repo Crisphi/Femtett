@@ -149,6 +149,7 @@ function minusSlides(){
 /**Mindmap**/
 function displayLine(lineId){
   document.getElementById(lineId).style("stroke-opacity", "1");
+  document.getElementById(lineId).style.opacity = "1";
 }
 
 /**Telephone**/

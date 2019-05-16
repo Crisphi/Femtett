@@ -5,6 +5,10 @@ body{
   font-family: "American Typewriter", monospace;
 }
 
+#setup{
+  position: absolute;
+}
+
 #heading{
   float: left;
   margin-left: 7px;
