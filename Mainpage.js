@@ -59,8 +59,8 @@ function displayCard(areaId,cardId,areaR="",cardR=""){
   displayModal("modal4",4);
   displayModal("modal3",3);
   document.getElementById(cardR).style.display = "none";
-  document.getElementById(areaR).coords = "";
-  document.getElementById(areaR).href = "";
+  document.getElementById(areaR).setAttribute("href", "javascript:function() { return false; };");
+  document.getElementById(areaR).style.cursor = "default";
   cardCounter++;
   createArea(areaId,cardId);
   if(cardCounter == 8){
@@ -146,6 +146,10 @@ function minusSlides(){
   updateImage();
 }
 
+/**Mindmap**/
+function displayLine(lineId){
+  document.getElementById(lineId).style("stroke-opacity", "1");
+}
 
 /**Telephone**/
 

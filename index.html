@@ -24,8 +24,8 @@
         <button id="bAll" class="button" onclick="displayAllCards()">Display all Cards</button> </br>
         <button id="bol" class="button" onclick="overlayOn('e1','card','cardOverlay')">Overlay on</button></br>
         <button id="lightR" class="button" onclick="displayLightroom()">displayLightroom</button></br>
-        <button id="tend" class="button" onclick="startForm()">Test End</button> </br>
-        <button id="be1" class="button" onclick="start()">Display Start</button>
+        <button id="tend" class="button" onclick="displayLine('line1')">Show Line</button> </br>
+        <button id="be1" class="button" onclick="start()">Display Start</button> </br>
         <button id="be1" class="button" onclick="document.getElementById('finPuzzleImg').style.display = 'block';">Display Puzzlefin</button>
 
         <!-- button for offline testing-->
@@ -109,6 +109,8 @@
         <div id="modal1content" class="modal-content">
           <span class="close">&times;</span>
           <img id="mindmap" src="Sources/Mindmap.jpg" alt="Mindmap" style="height:550px;"> <!--usemap="#mindmapMap"-->
+          <img id ="f2R" src="Sources/F2_R.png" alt="F2 im Bild">
+          <img id ="e2R" src="Sources/E2_R.png" alt="E2 im Bild" usemap="#e2Rmap">
           <!--<map name="mindmapMap">
             <area id="pin1" alt="Pin" shape="circle" coords="79.5,359.5,11.5" href="javascript:displayModal('modal1',1);">
             <area id="pin2" alt="Pin" shape="circle" coords="270.5,328.5,11.5" href="javascript:displayModal('modal1',1);">
@@ -142,10 +144,10 @@
             <img id="noteClip" class="imgZoom" src="Sources/Mindmap.jpg">
           </div>
           <div id="lineDiv">
-            <svg id="lines" height="550" width="733.2">
-              <line id="line1" x1="90" y1="355" x2="426" y2="121" style="stroke:rgb(255,0,0);stroke-width:2" />
-              <line id="line2" x1="428" y1="122" x2="276" y2="321" style="stroke:rgb(255,0,0);stroke-width:2" />
-              <line id="line3" x1="280" y1="332" x2="584" y2="349" style="stroke:rgb(255,0,0);stroke-width:2" />
+            <svg id="mindmapSvg" height="550" width="733.2">
+              <line class="line" id="line1" x1="90" y1="355" x2="426" y2="121" style="stroke:rgb(255,0,0);stroke-width:2" />
+              <line class="line" id="line2" x1="428" y1="122" x2="276" y2="321" style="stroke:rgb(255,0,0);stroke-width:2" />
+              <line class="line" id="line3" x1="280" y1="332" x2="584" y2="349" style="stroke:rgb(255,0,0);stroke-width:2" />
 
               <a href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
                 <polygon points="35,136,181,123,198,301,51,313" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
@@ -177,13 +179,6 @@
                 <polygon points="2394,302,550,312,550,363,533,369,533,416,394,414,390,358" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
               </a>
 
-              <a href ="javascript:displayCard('c6','f2');">
-                <polygon points="201,207,220,188,231,226,223,233" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
-              </a>
-              <a href ="javascript:displayCard('c2','e2');">
-                <polygon points="537,374,558,374,558,409,538,408" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
-              </a>
-
               <a href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
                 <circle cx="79.5" cy="359.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
               </a>
@@ -196,18 +191,14 @@
               <a href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
                 <circle cx="595.5" cy="347.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
               </a>
+              <a id="f2Rarea" href ="javascript:displayCard('c6','f2','f2Rarea','f2R');">
+                <polygon points="201,207,220,188,231,226,223,233" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
+              <a id="e2Rarea" href ="javascript:displayCard('c2','e2','e2Rarea','e2R');">
+                <polygon points="537,374,558,374,558,409,538,408" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+              </a>
             </svg>
           </div>
-
-          <!--Cards in mindmap-->
-          <img id ="f2R" src="Sources/F2_R.png" alt="F2 im Bild" usemap="#f2Rmap">
-          <map name="f2Rmap">
-            <area id="f2Rarea" alt="Area von F2 im Bild" shape="poly" coords="243,134.5,262,115.5,273,153.5,265,160.5" href ="javascript:displayCard('c6','f2','f2Rarea','f2R');">
-          </map>
-          <img id ="e2R" src="Sources/E2_R.png" alt="E2 im Bild" usemap="#e2Rmap">
-          <map name="e2Rmap">
-            <area id="e2Rarea" alt="Area von E2 im Bild" shape="poly" coords="207.1,87.7,228.1,87.7,228.1,122.7,208.1,121.7" href ="javascript:displayCard('c2','e2','e2Rarea','e2R');">
-          </map>
         </div>
       </div>
 
@@ -403,7 +394,7 @@
               Schnell, würfel Initiative!</br>
               <i class='fas fa-dice-d20' style='font-size:36px' onclick='randomNumber()'></i><span> = <span id="randomRes"></span></span></br>
               <input id="rZahl" type="hidden" name="Zahl"/></br>
-              <input type="submit" value="Test"/>
+              <input id="submitButton" type="submit" value="Test"/>
             </form>
           </div>
         </div>
