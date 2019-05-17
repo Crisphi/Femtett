@@ -63,7 +63,16 @@ body{
   color: rgba(128, 0, 42,0.7);
 }
 
-#icon:hover, #icon:focus{
+#endingIcon{
+  position: absolute;
+  top: 492px;
+  left: 970px;
+  color: rgb(128, 0, 42);
+  color: rgba(128, 0, 42,0.7);
+  display: none;
+}
+
+#icon:hover, #icon:focus, #endingIcon:hover, #endingIcon:focus{
   color: rgb(128, 0, 42);
   color: rgba(128, 0, 42,1);
 }
@@ -81,7 +90,7 @@ body{
   cursor: pointer;
 }
 
-.modal, #ending{
+.modal{
   display: none;
   position: absolute;
   z-index: 1;
@@ -105,12 +114,24 @@ body{
   position: absolute;
   left: 50%;
   margin-left: -505px;
-
 }
 
 #modal7content{
   width: 1235px;
   margin-left: -630px;
+}
+
+#ending{
+  display: none;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.7);
 }
 
 #puzzle{
@@ -280,6 +301,26 @@ body{
   text-align: left;
   color: black;
   font-weight: bold;
+}
+
+#disclaimer{
+  position: absolute;
+  text-align: left;
+  color: rgb(128, 0, 42);
+  font-weight: bold;
+  font-size: 14px;
+  left: 423px;
+  top: 360px;
+  width: 441px;
+  height: 185px;
+  padding: 10px;
+  padding-top: 0px;
+}
+
+#disclaimer::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 #indexText{

@@ -24,7 +24,7 @@
         <button id="bAll" class="button" onclick="displayAllCards()">Display all Cards</button> </br>
         <button id="bol" class="button" onclick="overlayOn('e1','card','cardOverlay')">Overlay on</button></br>
         <button id="lightR" class="button" onclick="displayLightroom()">displayLightroom</button></br>
-        <button id="tend" class="button" onclick="displayLine('line1')">Show Line</button> </br>
+        <button id="tend" class="button" onclick="lineTest('pin1')">Mark Button</button> </br>
         <button id="be1" class="button" onclick="start()">Display Start</button> </br>
         <button id="be1" class="button" onclick="document.getElementById('finPuzzleImg').style.display = 'block';">Display Puzzlefin</button>
 
@@ -103,6 +103,7 @@
       </div>
 <!--Icons-->
       <i id="icon" class="fas fa-book-open" alt="Go to Cardalbum" style="font-size:36px" onclick="displayModal('modal3',3)"></i>
+      <i id="endingIcon" class='fab fa-wpforms' style='font-size:36px' onclick="displayModal('ending', 8)"></i>
 
 <!--Pinboard-->
       <div id="modal1" class="modal">
@@ -145,57 +146,57 @@
           </div>
           <div id="lineDiv">
             <svg id="mindmapSvg" height="550" width="733.2">
-              <line class="line" id="line1" x1="90" y1="355" x2="426" y2="121" style="stroke:rgb(255,0,0);stroke-width:2" />
-              <line class="line" id="line2" x1="428" y1="122" x2="276" y2="321" style="stroke:rgb(255,0,0);stroke-width:2" />
-              <line class="line" id="line3" x1="280" y1="332" x2="584" y2="349" style="stroke:rgb(255,0,0);stroke-width:2" />
+              <line class="line" id="line1" x1="90" y1="355" x2="426" y2="121" style="stroke:rgb(128, 0, 42);stroke-width:2;" />
+              <line class="line" id="line2" x1="428" y1="122" x2="276" y2="321" style="stroke:rgb(128, 0, 42);stroke-width:2;" />
+              <line class="line" id="line3" x1="280" y1="332" x2="584" y2="349" style="stroke:rgb(128, 0, 42);stroke-width:2;" />
 
               <a href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
-                <polygon points="35,136,181,123,198,301,51,313" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+                <polygon points="35,136,181,123,198,301,51,313"/>
               </a>
               <a href ="javascript:displayZoom('b2Clip','zoomed','zoomOverlay');">
-                <polygon points="257,344,353,352,346,452,251,448" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+                <polygon points="257,344,353,352,346,452,251,448"/>
               </a>
               <a href ="javascript:displayZoom('b3Clip','zoomed','zoomOverlay');">
-                <polygon points="298,99,414,102,416,196,298,197" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+                <polygon points="298,99,414,102,416,196,298,197"/>
               </a>
               <a href ="javascript:displayZoom('b4Clip','zoomed','zoomOverlay');">
-                <polygon points="588,206,649,204,654,300,592,304" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+                <polygon points="588,206,649,204,654,300,592,304"/>
               </a>
 
               <a href ="javascript:displayZoom('com1Clip','zoomed','zoomOverlay');">
-                <polygon points="63,377,200,390,193,467,54,452" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+                <polygon points="63,377,200,390,193,467,54,452"/>
               </a>
               <a href ="javascript:displayZoom('com2Clip','zoomed','zoomOverlay');">
-                <polygon points="243,229,380,223,386,304,245,303" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+                <polygon points="243,229,380,223,386,304,245,303"/>
               </a>
               <a href ="javascript:displayZoom('com3Clip','zoomed','zoomOverlay');">
-                <polygon points="455,102,564,88,576,184,553,184,555,196,444,208" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+                <polygon points="455,102,564,88,576,184,553,184,555,196,444,208"/>
               </a>
               <a href ="javascript:displayZoom('com4Clip','zoomed','zoomOverlay');">
-                <polygon points="618,342,715,348,712,454,576,446,580,372,615,366" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+                <polygon points="618,342,715,348,712,454,576,446,580,372,615,366"/>
               </a>
 
               <a href ="javascript:displayZoom('noteClip','zoomed','zoomOverlay');">
-                <polygon points="2394,302,550,312,550,363,533,369,533,416,394,414,390,358" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+                <polygon points="2394,302,550,312,550,363,533,369,533,416,394,414,390,358"/>
               </a>
 
-              <a href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
-                <circle cx="79.5" cy="359.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
+              <a id="apin1" href ="javascript:lineTest('pin1');">
+                <circle id="pin1" cx="79.5" cy="359.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
               </a>
-              <a href ="javascript:displayLine('line1');">
-                <circle cx="433.5" cy="113.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
+              <a id="apin2" href ="javascript:lineTest('pin2');">
+                <circle id="pin2" cx="433.5" cy="113.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
               </a>
-              <a href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
-                <circle cx="270.5" cy="328.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
+              <a id="apin3" href ="javascript:lineTest('pin3');">
+                <circle id="pin3" cx="270.5" cy="328.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
               </a>
-              <a href ="javascript:displayZoom('b1Clip','zoomed','zoomOverlay');">
-                <circle cx="595.5" cy="347.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
+              <a id="apin4" href ="javascript:lineTest('pin4');">
+                <circle id="pin4" cx="595.5" cy="347.5" r="11.5" stroke="black" stroke-width="3" fill="red" />
               </a>
               <a id="f2Rarea" href ="javascript:displayCard('c6','f2','f2Rarea','f2R');">
-                <polygon points="201,207,220,188,231,226,223,233" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+                <polygon points="201,207,220,188,231,226,223,233"/>
               </a>
               <a id="e2Rarea" href ="javascript:displayCard('c2','e2','e2Rarea','e2R');">
-                <polygon points="537,374,558,374,558,409,538,408" style="stroke:purple;stroke-width:1;fill-opacity:0.0;stroke-opacity:0.0;"/>
+                <polygon points="537,374,558,374,558,409,538,408"/>
               </a>
             </svg>
           </div>
@@ -410,7 +411,7 @@
 <!-- Ending -->
       <div id="ending">
         <div id="endingContent">
-          <span id="endingClose" class="close">&times;</span>
+          <span class="close">&times;</span>
           <img id="endingBackg" alt="Hintergrund Briefpapier" src="Sources/start_Brief_background.jpg" style="height:550px;">
           <div id="endingForm">
             <form action="https://getsimpleform.com/messages?form_api_token=725901ead20e0e664d37ae346bf32bf5" method="post">
@@ -433,8 +434,14 @@
               Schnell, würfel Initiative!</br>
               <i class='fas fa-dice-d20' style='font-size:36px' onclick='randomNumber()'></i><span> = <span id="randomRes"></span></span></br>
               <input id="rZahl" type="hidden" name="Zahl"/></br>
-              <input id="submitButton" type="submit" value="Test"/>
+              <input id="submitButton" type="submit" value="Absenden und Spiel beenden"/>
             </form>
+          </div>
+          <div id="disclaimer">
+            <p>Die eingegebenen Daten werden verwendet, um dem/der nächsten SpielerIn einen individualisierten Anfangsbrief zu erstellen.
+            </br> Gib sinnvolle Antworten und schreibe keine Beleidigungen, damit jede/r dieses Spiel genießen kann.</p>
+            <p>Die Daten werden auf dem Server eines externen Anbieters verarbeitet und sind öffentlich einsehbar.
+            </br> Bitte schreibe keine sensiblen Informationen in die Felder</p>
           </div>
         </div>
       </div>

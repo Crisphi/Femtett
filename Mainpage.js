@@ -66,7 +66,8 @@ function displayCard(areaId,cardId,areaR="",cardR=""){
   cardCounter++;
   createArea(areaId,cardId);
   if(cardCounter == 8){
-    displayModal("ending");
+    displayModal("ending", 8);
+    document.getElementById("endingIcon").style.display = "block";
   }
 }
 
@@ -150,8 +151,71 @@ function minusSlides(){
 
 /**Mindmap**/
 function displayLine(lineId){
-  document.getElementById(lineId).style("stroke-opacity", "1");
-  document.getElementById(lineId).style.opacity = "1";
+  document.getElementById(lineId).style.strokeOpacity = 1.0;
+}
+
+function unmarkAll(){
+  document.getElementById("line1").style.strokeOpacity = 0.0;
+  document.getElementById("line2").style.strokeOpacity = 0.0;
+  document.getElementById("line3").style.strokeOpacity = 0.0;
+  document.getElementById("pin1").style.fillOpacity = 0.0;
+  document.getElementById("pin2").style.fillOpacity = 0.0;
+  document.getElementById("pin3").style.fillOpacity = 0.0;
+  document.getElementById("pin4").style.fillOpacity = 0.0;
+  pinCount = 0;
+  ptemp = "";
+}
+
+function uncklickAll(){
+  document.getElementById("apin1").setAttribute("href", "javascript:function() { return false; };");
+  document.getElementById("apin2").setAttribute("href", "javascript:function() { return false; };");
+  document.getElementById("apin3").setAttribute("href", "javascript:function() { return false; };");
+  document.getElementById("apin4").setAttribute("href", "javascript:function() { return false; };");
+
+  document.getElementById("apin1").style.cursor = "default";
+  document.getElementById("apin2").style.cursor = "default";
+  document.getElementById("apin3").style.cursor = "default";
+  document.getElementById("apin4").style.cursor = "default";
+}
+
+var pins = ["pin1","pin2","pin3","pin4"];
+var pinCount = 0;
+var ptemp = "";
+function lineTest(pin){
+  if(pinCount == 0){
+    document.getElementById(pin).style.fillOpacity = 0.5;
+    ptemp = pin;
+    pinCount++;
+  }else if(pinCount == 1){
+    if(ptemp == pins[pinCount-1] && pin == pins[pinCount]){
+      document.getElementById(ptemp).style.fillOpacity = 0.0;
+      ptemp = pin;
+      pinCount++;
+      displayLine("line1");
+    }else{
+      unmarkAll();
+    }
+  }else if(pinCount == 2){
+    if(pin == pins[pinCount]){
+      ptemp = pin;
+      pinCount++;
+      displayLine("line2");
+    }else{
+      unmarkAll();
+    }
+  }else if(pinCount == 3){
+    if(pin == pins[pinCount]){
+      ptemp = pin;
+      pinCount++;
+      displayLine("line3");
+      displayCard("c3","e3");
+      uncklickAll();
+    }else{
+      unmarkAll();
+    }
+  }else{
+    unmarkAll();
+  }
 }
 
 /**Telephone**/
@@ -262,6 +326,7 @@ function displayAllCards(){
   displayModal("modal3",3);
   alert("All cards displayed");
   displayModal("ending",8);
+  document.getElementById("endingIcon").style.display = "block";
 }
 function allCards(value){
   var card = document.getElementById(value);
