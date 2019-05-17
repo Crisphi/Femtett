@@ -134,6 +134,10 @@ body{
   background-color: rgba(0,0,0,0.7);
 }
 
+#endingNote{
+  z-index: 6;
+}
+
 #puzzle{
   position: absolute;
   width:1200px;
@@ -298,6 +302,15 @@ body{
   top: 50%;
   left: 30%;
   transform: translate(-23%, -50%);
+  text-align: left;
+  color: black;
+  font-weight: bold;
+}
+
+#eNoteText{
+  position: absolute;
+  top: 150px;
+  left: 260px;
   text-align: left;
   color: black;
   font-weight: bold;

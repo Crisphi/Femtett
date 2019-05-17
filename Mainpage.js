@@ -66,6 +66,7 @@ function displayCard(areaId,cardId,areaR="",cardR=""){
   cardCounter++;
   createArea(areaId,cardId);
   if(cardCounter == 8){
+    displayModal("endingNote",9);
     displayModal("ending", 8);
     document.getElementById("endingIcon").style.display = "block";
   }
@@ -324,7 +325,7 @@ function displayAllCards(){
   var cards = ["e1","e2","e3","e4","f1","f2","f3","f4"];
   cards.forEach(allCards);
   displayModal("modal3",3);
-  alert("All cards displayed");
+  displayModal("endingNote",9);
   displayModal("ending",8);
   document.getElementById("endingIcon").style.display = "block";
 }

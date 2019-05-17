@@ -26,7 +26,7 @@
         <button id="lightR" class="button" onclick="displayLightroom()">displayLightroom</button></br>
         <button id="tend" class="button" onclick="lineTest('pin1')">Mark Button</button> </br>
         <button id="be1" class="button" onclick="start()">Display Start</button> </br>
-        <button id="be1" class="button" onclick="document.getElementById('finPuzzleImg').style.display = 'block';">Display Puzzlefin</button>
+        <button id="be1" class="button" onclick="displayModal('endingNote',9)">Display EndNote</button>
 
         <!-- button for offline testing-->
         <!--<button id="altButton" class="button" onclick="displayModal('modal3',2)">cardAlbum</button>-->
@@ -417,23 +417,23 @@
             <form action="https://getsimpleform.com/messages?form_api_token=725901ead20e0e664d37ae346bf32bf5" method="post">
               <input type='hidden' name='redirect_to' value='https://crisphi.github.io/Femtett/galery.html'/>
               Wie heißt du?</br>
-              <input type="text" name="Name"/></br>
+              <input type="text" name="Name" required/></br>
               In welchem Wissenschaftsbereich forscht dein/e AbenteurerIn?</br>
-              <input type="text" name="Wissenschaft"/></br>
+              <input type="text" name="Wissenschaft" required/></br>
               Mit welchem Adjektiv würdest du diese Reise beschreiben?</br>
-              <input type="text" name="Adjektiv"/></br>
+              <input type="text" name="Adjektiv" required/></br>
               Nenne eine Aktivität, die man im Freien unternimmt</br>
-              <input type="text" name="Aktivitaet"/></br>
+              <input type="text" name="Aktivitaet" required/></br>
               Du bist in einem Dungeon. Links und Rechts geht ein Gang entlang. Welchen nimmst du?</br>
-              <input type="radio" name="Richtung" value="links"/>Links</br>
-              <input type="radio" name="Richtung" value="rechts"/>Rechts</br>
+              <input type="radio" name="Richtung" value="links" required/>Links</br>
+              <input type="radio" name="Richtung" value="rechts" required/>Rechts</br>
               Eine Pflanze in der Mehrzahl</br>
-              <input type="text" name="Gegenstand"/></br>
+              <input type="text" name="Gegenstand" required/></br>
               Was rufst du, wenn du einen dreiköpfigen Affen siehst?</br>
-              <input type="text" name="Ausruf"/></br>
+              <input type="text" name="Ausruf" required/></br>
               Schnell, würfel Initiative!</br>
               <i class='fas fa-dice-d20' style='font-size:36px' onclick='randomNumber()'></i><span> = <span id="randomRes"></span></span></br>
-              <input id="rZahl" type="hidden" name="Zahl"/></br>
+              <input id="rZahl" type="hidden" name="Zahl" value="3"/></br>
               <input id="submitButton" type="submit" value="Absenden und Spiel beenden"/>
             </form>
           </div>
@@ -442,6 +442,19 @@
             </br> Gib sinnvolle Antworten und schreibe keine Beleidigungen, damit jede/r dieses Spiel genießen kann.</p>
             <p>Die Daten werden auf dem Server eines externen Anbieters verarbeitet und sind öffentlich einsehbar.
             </br> Bitte schreibe keine sensiblen Informationen in die Felder</p>
+          </div>
+        </div>
+      </div>
+
+<!-- Ending notification-->
+      <div id="endingNote" class="modal">
+        <div id="endingNotecontent" class="modal-content">
+          <span class="close">&times;</span>
+          <img id="eNoteBackg" alt="Hintergrund Briefpapier" src="Sources/End_Brief_background.jpg" style="height:550px;">
+          <div id="eNoteText" style="width: 450px; height: 550px;">
+            <p>Glückwunsch!</br> Du hast viel über besondere Frauen der Geschichte erfahren und alle Rätsel gelöst. </br>
+            Du hast es bis hierhin geschafft und alle versteckten Quartettkarten eingesammelt. </br> Großmutter wäre stolz auf dich.</p>
+            <p>Aber ein Rätsel wartet noch! Sobald du diese letzten Fragen beantwortet hast, wirst du verstehen, was das alles zu bedeuten hat...</p>
           </div>
         </div>
       </div>
