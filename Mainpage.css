@@ -157,19 +157,19 @@ body{
   top: 49px;
   display: none;
 }
-#modal4content {
+#modal4content,#modal10Content,#modal11Content, #modal12Content{
   background-color: black;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  text-align: center;
+  text-align: left;
   width: 306px;
   height: auto;
   left: 50%;
   margin-left: -153px;
 }
 
-#modal4{
+#modal4, #modal10, #modal11, #modal12{
   z-index: 4;
 }
 #modal3{
@@ -399,6 +399,10 @@ body{
 }
 .prev:hover,
 .next:hover {
+  color:  rgb(128, 0, 42);
+}
+
+#t1up:hover,#t2up:hover,#t3up:hover,#t4up:hover,#t1dwn:hover,#t2dwn:hover,#t3dwn:hover,#t4dwn:hover,#phone:hover{
   color:  rgb(128, 0, 42);
 }
 

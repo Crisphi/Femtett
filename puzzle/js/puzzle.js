@@ -194,7 +194,9 @@ const gameBoard = {
     doWinShow: function () {
       parent.document.getElementById('finPuzzleImg').style.display = "block";
       document.getElementById('game-board').style.opacity = "0.0";
-      parent.document.getElementById('modal7').style.display = 'none';
+      document.getElementById('shuffle').style.display = "none";
+      parent.document.getElementById('desk').href = "javascript:displayModal('modal7',7)";
+      /**parent.document.getElementById('modal7').style.display = 'none';**/
       parent.displayCard('c8','f4');
     },
 

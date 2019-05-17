@@ -106,6 +106,7 @@ function displayLightroom(){
   var slideImg = document.getElementById("slideImg");
   slideIndex = 0;
   slideImg.src = slides[slideIndex];
+  displayModal("modal11", 11);
   displayModal("modal5", 5);
 }
 
@@ -317,6 +318,11 @@ function startForm(callback){
 
 function start(){
   $.when(startForm()).then(function(){displayModal('startTextModal',0)});
+}
+
+function displayWNote(modal, mClose, note, nClose){
+  displayModal(note, nClose);
+  displayModal(modal, mClose);
 }
 
 
