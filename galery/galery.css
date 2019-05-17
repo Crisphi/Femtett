@@ -90,5 +90,8 @@ a:active {
 }
 
 #about, #contact {
-  padding: 30px;
+  padding-top: 0px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
 }
