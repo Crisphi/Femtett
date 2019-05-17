@@ -26,11 +26,11 @@ var zoomSrc = {
   "com4Clip":{"margin-left": "-1000px", "margin-top": "-650px", "transform": "scale(1,1)"},
   "noteClip":{"margin-left": "-800px", "margin-top": "-650px", "transform": "scale(1,1)"},
 
-  "one":{"margin-left": "0px", "margin-top": "-320px", "transform": "scale(1.3,1.3)"},
-  "two":{"margin-left": "-100px", "margin-top": "-320px", "transform": "scale(0.9,0.9)"}
+  "one":{"margin-left": "-430px", "margin-top": "-700px","transform": "scale(0.7, 0.7)"},
+  "two":{"margin-left": "-449px", "margin-top": "-520px", "transform": "scale(0.8,0.8)"}
 };
 var slideIndex = 0;
-slides=["Sources/Marburger_Profs_Notiz.jpg","Sources/Marburger_Profs_Folie.jpg","Sources/Marburger_Profs_Foto.jpg"];
+slides=["Sources/Marburger_Profs_Notiz.jpg","Sources/Marburger_Profs_Folie_big.jpg","Sources/Marburger_Profs_Foto_big.jpg"];
 
 
 function displayModal(modalId,closeIndex=0){

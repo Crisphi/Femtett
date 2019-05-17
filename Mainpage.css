@@ -385,6 +385,10 @@ body{
   display: inline-block;
 }
 
+#slideImg{
+  width: 658px;
+  height: 540px;
+}
 .prev{
   float: left;
   margin-left: -42.65px;
