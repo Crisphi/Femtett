@@ -88,3 +88,7 @@ a:active {
   color: rgb(128, 0, 42);
   text-decoration: underline;
 }
+
+#about, #contact {
+  padding: 30px 
+}
