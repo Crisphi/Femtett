@@ -90,8 +90,9 @@ a:active {
 }
 
 #about, #contact {
-  padding-top: 0px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
+  padding: 0px 30px 30px 30px;
+}
+
+#para4, #para5, #para6 {
+  padding-bottom: 25px;
 }
