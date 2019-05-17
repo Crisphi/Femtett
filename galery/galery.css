@@ -6,6 +6,10 @@ body{
   font-weight: bold;
 }
 
+.insert{
+  color:rgb(128, 0, 42);
+}
+
 #header{
   background-image: url("../Sources/Mindmap.jpg");
   width: 100%;
@@ -54,7 +58,7 @@ body{
 }
 
 #footer{
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -87,4 +91,20 @@ a:hover {
 a:active {
   color: rgb(128, 0, 42);
   text-decoration: underline;
+}
+
+#formText{
+  position: relative;
+  top: 50%;
+  left: 30%;
+  transform: translate(-23%, -50%);
+  text-align: left;
+  color: black;
+  font-weight: bold;
+}
+
+#formbox{
+  background-image: url("../Sources/start_Brief_background.jpg");
+  height: auto;
+  max-width: 700px;
 }

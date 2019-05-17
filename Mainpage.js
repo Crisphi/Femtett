@@ -329,6 +329,10 @@ window.onbeforeunload = function(event)
    {
        return confirm("Willst du wirklich gehen? Dein Spielfortschritt wird nicht gespeichert!");
    };
+
+function closeEnd(){
+  document.getElementById('ending').style.display = 'none';
+}
 /** just for testing**/
 function displayAllCards(){
   var cards = ["e1","e2","e3","e4","f1","f2","f3","f4"];

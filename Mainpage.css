@@ -418,7 +418,7 @@ body{
   stroke-opacity:0.0;
 }
 
-#submitButton {
+#submitButton, #closeEnding {
   background-color: rgb(128, 0, 42);
   border: none;
   color: white;
@@ -430,11 +430,21 @@ body{
   border-radius: 4px;
 }
 
-#submitButton:hover {
+#closeEnding{
+  padding: 15px 20px;
+  margin-top: 5px;
+  background-color: #4caf50;
+}
+
+#submitButton:hover{
   background-color: rgb(128, 0, 42);
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+#closeEnding:hover {
+  background-color: rgb(54, 124, 58);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 .aIndex:link {
   color: rgb(128, 0, 42);
   text-decoration: none;

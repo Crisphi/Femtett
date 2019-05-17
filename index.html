@@ -10,7 +10,7 @@
   </head>
   <body onload="start()">
 
-<!-- Buttons for testing card display -->
+<!-- Buttons for testing card display
       <div id="testingButtons">
         <p>Buttons for testing</p>
         <button id="be1" class="button" onclick="displayCard('c1','e1')">Display Card E1</button> </br>
@@ -28,9 +28,9 @@
         <button id="be1" class="button" onclick="start()">Display Start</button> </br>
         <button id="be1" class="button" onclick="displayModal('endingNote',9)">Display EndNote</button>
 
-        <!-- button for offline testing-->
-        <!--<button id="altButton" class="button" onclick="displayModal('modal3',2)">cardAlbum</button>-->
-      </div>
+        button for offline testing
+        <button id="altButton" class="button" onclick="displayModal('modal3',2)">cardAlbum</button>
+      </div>-->
 
       <div id="setup">
         <table>
@@ -419,8 +419,10 @@
               Schnell, würfel Initiative!</br>
               <i class='fas fa-dice-d20' style='font-size:36px' onclick='randomNumber()'></i><span> = <span id="randomRes"></span></span></br>
               <input id="rZahl" type="hidden" name="Zahl" value="3"/></br>
-              <input id="submitButton" type="submit" value="Absenden und Spiel beenden"/>
+              <input id="submitButton" type="submit" value="Absenden und Spiel beenden"/></br>
+              <button id="closeEnding" type="button" onclick="closeEnd()">Sich nochmal umsehen</button>
             </form>
+
           </div>
           <div id="disclaimer">
             <p>Die eingegebenen Daten werden verwendet, um dem/der nächsten SpielerIn einen individualisierten Anfangsbrief zu erstellen.
