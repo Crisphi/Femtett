@@ -195,7 +195,7 @@ const gameBoard = {
       parent.document.getElementById('finPuzzleImg').style.display = "block";
       document.getElementById('game-board').style.opacity = "0.0";
       parent.document.getElementById('modal7').style.display = 'none';
-      parent.displayCard('c6','f2','f2Rarea','f2R');
+      parent.displayCard('c8','f4');
     },
 
     // Since each puzzle slot is stationary where it should be, stroke a line around each.

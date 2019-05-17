@@ -58,9 +58,11 @@ function displayCard(areaId,cardId,areaR="",cardR=""){
   card.style.display = "inline";
   displayModal("modal4",4);
   displayModal("modal3",3);
-  document.getElementById(cardR).style.display = "none";
-  document.getElementById(areaR).setAttribute("href", "javascript:function() { return false; };");
-  document.getElementById(areaR).style.cursor = "default";
+  if(cardR != "" && areaR != ""){
+    document.getElementById(cardR).style.display = "none";
+    document.getElementById(areaR).setAttribute("href", "javascript:function() { return false; };");
+    document.getElementById(areaR).style.cursor = "default";
+  }
   cardCounter++;
   createArea(areaId,cardId);
   if(cardCounter == 8){
@@ -159,20 +161,68 @@ function testPhone(){
   var cor2 = 3;
   var cor3 = 7;
   var cor4 = 4;
-  var t1Value = document.getElementById("t1").value;
-  var t2Value = document.getElementById("t2").value;
-  var t3Value = document.getElementById("t3").value;
-  var t4Value = document.getElementById("t4").value;
+  var t1Value = document.getElementById("t1").innerHTML;
+  var t2Value = document.getElementById("t2").innerHTML;
+  var t3Value = document.getElementById("t3").innerHTML;
+  var t4Value = document.getElementById("t4").innerHTML;
+  var t1Numb = parseInt(t1Value,10);
+  var t2Numb = parseInt(t2Value,10);
+  var t3Numb = parseInt(t3Value,10);
+  var t4Numb = parseInt(t4Value,10);
 
-  if(cor1 == t1Value && cor2 == t2Value && cor3 == t3Value && cor4 == t4Value){
-    displayCard('c3','e3');
+  if(cor1 == t1Numb && cor2 == t2Numb && cor3 == t3Numb && cor4 == t4Numb){
+    displayCard("c1","e1");
   }else{
-    t1Value = "";
-    t2Value = "";
-    t3Value = "";
-    t4Value = "";
-    displayModal("ending",8);
+    document.getElementById("t1").style.color = "red";
+    document.getElementById("t2").style.color = "red";
+    document.getElementById("t3").style.color = "red";
+    document.getElementById("t4").style.color = "red";
+
+    document.getElementById("t1").innerHTML = "0";
+    document.getElementById("t2").innerHTML = "0";
+    document.getElementById("t3").innerHTML = "0";
+    document.getElementById("t4").innerHTML = "0";
   }
+}
+
+function numbUp(numbId){
+  document.getElementById("t1").style.color = "white";
+  document.getElementById("t2").style.color = "white";
+  document.getElementById("t3").style.color = "white";
+  document.getElementById("t4").style.color = "white";
+
+  var val = document.getElementById(numbId).innerHTML;
+  console.log(val);
+  var numb = parseInt(val, 10);
+  if(numb >= 9){
+    numb = 0;
+  }else{
+    numb++;
+  }
+  console.log(numb);
+  $("#"+numbId).html("" + numb + "");
+  console.log(document.getElementById(numbId));
+  console.log(document.getElementById(numbId).innerHTML);
+}
+
+function numbDwn(numbId){
+  document.getElementById("t1").style.color = "white";
+  document.getElementById("t2").style.color = "white";
+  document.getElementById("t3").style.color = "white";
+  document.getElementById("t4").style.color = "white";
+
+  var val = document.getElementById(numbId).innerHTML;
+  console.log(val);
+  var numb = parseInt(val, 10);
+  if(numb <= 0){
+    numb = 9;
+  }else{
+    numb--;
+  }
+  console.log(numb);
+  $("#"+numbId).html("" + numb + "");
+  console.log(document.getElementById(numbId));
+  console.log(document.getElementById(numbId).innerHTML);
 }
 
 function randomNumber(){
