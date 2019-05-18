@@ -93,7 +93,6 @@ a:active {
   text-decoration: underline;
 }
 
-<<<<<<< HEAD
 #formText{
   position: relative;
   top: 50%;
@@ -108,12 +107,12 @@ a:active {
   background-image: url("../Sources/start_Brief_background.jpg");
   height: auto;
   max-width: 700px;
-=======
+}
+
 #about, #contact, #galery {
   padding: 0px 30px 30px 30px;
 }
 
 #para4, #para5, #para6 {
   padding-bottom: 25px;
->>>>>>> 2a512714e3e2ce62c2e6a9df7aaff97a239e697a
 }
