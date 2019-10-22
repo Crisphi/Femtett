@@ -1,17 +1,20 @@
+//current entry
 var index = 0;
+//length of entrylist starting with zero
 var length;
 
+//get the next entry
 function nextForm(){
+  //request length of entrylist
   $.get("https://getsimpleform.com/messages.js?api_token=83616c2d07981a59b557c634837b419d",{}, function(response){
     $("#length").val(response.length);
-
     length = document.getElementById("length");
-    console.log(length);
     length = length.value;
     length = parseInt(length,10);
     length = length -1;
     console.log(length);
 
+    //check if index is smaller than length, increase accordingly, overwrite span "index" and update
     if(index < length){
       index++;
       $("#index").html(index);
@@ -22,14 +25,15 @@ function nextForm(){
       index = 0;
       $("#index").html(index);
       update(index);
-      console.log(length);
       console.log("Done2");
       console.log(index);
     }
   }, 'jsonp', async = false);
 }
 
+//get prev entry
 function prevForm(){
+  //request length of entrylist
   $.get("https://getsimpleform.com/messages.js?api_token=83616c2d07981a59b557c634837b419d",{}, function(response){
     $("#length").val(response.length);
 
@@ -40,6 +44,7 @@ function prevForm(){
     length = length -1;
     console.log(length);
 
+    //check if index is bigger than length, decrease accordingly, overwrite span "index" and update
     if(index > 0){
       index--;
       $("#index").html(index);
@@ -54,6 +59,7 @@ function prevForm(){
   }, 'jsonp', async = false);
 }
 
+//get latest entry
 function latest(){
   index = 0;
   $("#index").html(index);
@@ -61,7 +67,9 @@ function latest(){
   console.log(index);
 }
 
+//will be executed on load
 function start(callback){
+  //request length of entrylist
   $.get("https://getsimpleform.com/messages.js?api_token=83616c2d07981a59b557c634837b419d",{}, function(response){
     $("#length").val(response.length);
     $("#length").html(response.length);
@@ -73,13 +81,15 @@ function start(callback){
     length = length -1;
     console.log(length);
   }, 'jsonp', async = false);
+
   update(index);
 }
 
-
+//update userdata accordingly to index
 function update(i){
   console.log("started function");
   var tRaw;
+  //request userdata and overwrite spans
   tRaw = $.get("https://getsimpleform.com/messages.js?api_token=83616c2d07981a59b557c634837b419d",{}, function(response){
     $("#adj").html(response[i].data.Adjektiv);
     $("#wiss").html(response[i].data.Wissenschaft);
@@ -101,6 +111,5 @@ function update(i){
   }, 'jsonp', async = false);
 
   /**for Testing**/
-  var tData = tRaw;
-  console.log(tData);
+  console.log(tRaw);
 }
