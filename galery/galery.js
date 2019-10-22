@@ -1,16 +1,8 @@
 var index = 0;
 var length;
-/**$(document).ready(function(){
-  length = $("#length").val();
-  //length = length - 1;
-  console.log(length);
-});**/
-
-
 
 function nextForm(){
   $.get("https://getsimpleform.com/messages.js?api_token=83616c2d07981a59b557c634837b419d",{}, function(response){
-    //console.log(response.length);
     $("#length").val(response.length);
 
     length = document.getElementById("length");
@@ -39,7 +31,6 @@ function nextForm(){
 
 function prevForm(){
   $.get("https://getsimpleform.com/messages.js?api_token=83616c2d07981a59b557c634837b419d",{}, function(response){
-    //console.log(response.length);
     $("#length").val(response.length);
 
     length = document.getElementById("length");
@@ -72,7 +63,6 @@ function latest(){
 
 function start(callback){
   $.get("https://getsimpleform.com/messages.js?api_token=83616c2d07981a59b557c634837b419d",{}, function(response){
-    //console.log(response.length);
     $("#length").val(response.length);
     $("#length").html(response.length);
 
@@ -114,6 +104,3 @@ function update(i){
   var tData = tRaw;
   console.log(tData);
 }
-/**function start(){
-  $.when(startForm()).then(function(){displayModal('startTextModal',0)});
-}**/
