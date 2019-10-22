@@ -17,13 +17,13 @@ function nextForm(){
     //check if index is smaller than length, increase accordingly, overwrite span "index" and update
     if(index < length){
       index++;
-      $("#index").html(index);
+      $("#index").html(index+1);
       update(index);
       console.log("Done1");
       console.log(index)
     }else{
       index = 0;
-      $("#index").html(index);
+      $("#index").html(index+1);
       update(index);
       console.log("Done2");
       console.log(index);
@@ -47,12 +47,12 @@ function prevForm(){
     //check if index is bigger than length, decrease accordingly, overwrite span "index" and update
     if(index > 0){
       index--;
-      $("#index").html(index);
+      $("#index").html(index+1);
       update(index);
       console.log(index);
     }else{
       index = length;
-      $("#index").html(index);
+      $("#index").html(index+1);
       update(index);
       console.log(index);
     }
@@ -62,7 +62,7 @@ function prevForm(){
 //get latest entry
 function latest(){
   index = 0;
-  $("#index").html(index);
+  $("#index").html(index+1);
   update(index);
   console.log(index);
 }
