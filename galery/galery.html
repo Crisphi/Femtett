@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <title>Femtett - Galerie </title>
     <link rel="stylesheet" type="text/css" href="galery.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="galery.js"></script>
   </head>
-  <body>
+  <body onload="start()">
     <div id="header">
       <div id="heading">
         <h1>Femtett Adventure Game</h1>
@@ -21,8 +24,73 @@
     <div id="workspace">
       <div id="galery">
         <h2>Galerie</h2>
+        <div id="explanation">
+          <p>Femtett beginnt mit einem mysteriösen Brief.
+            Erzählt wird von Großmutter, die schon immer gerne Rätsel mochte und Geschichten sammelte.
+            Dein Vermächtnis ist es ihr Lebenswerk weiterzuführen und selbst zur DatensammlerIn zu werden!
+            Und das wortwörtlich! </br>Der letzte Schritt zum Beenden deines Abenteuers ist es dich selbst und deine Geschichte zu verewigen,
+            um die Geschichte von Großmutter der nächsten SpielerIn zu erzählen!</p><p>
+            Hier sind die mutigen DatensammlerInnen, die es bis ans Ende geschafft haben und nun ihr eigenes Abenteuer schreiben:
+          </p>
+        </div>
         <div id="para5">
-          <p> Hier folgt die Galerie, aller bisherigen Briefe.</p>
+          <div id="endingForm">
+            <img id="eNoteBackg" alt="Hintergrund Briefpapier" src="../Sources/End_Brief_background.jpg" style="height:400px;width:550px;">
+            <div id="formtext">
+              Wie heißt du?</br>
+              <div id="name" class="eingaben">Name</div>
+              In welchem Wissenschaftsbereich forscht dein/e AbenteurerIn?</br>
+              <div id="wiss" class="eingaben">Wissenschaft</div>
+              Mit welchem Adjektiv würdest du diese Reise beschreiben?</br>
+              <div id="adj"  class="eingaben">Adjektiv</div>
+              Nenne eine Aktivität, die man im Freien unternimmt</br>
+              <div id="aktiv"  class="eingaben">Aktivität</div>
+              Du bist in einem Dungeon. Links und Rechts geht ein Gang entlang. Welchen nimmst du?</br>
+              <div id="richtung" class="eingaben">Richtung</div>
+              Eine Pflanze in der Mehrzahl</br>
+              <div id ="gegenstand"  class="eingaben">Planze</div>
+              Was rufst du, wenn du einen dreiköpfigen Affen siehst?</br>
+              <div id="ausruf"  class="eingaben">Ausruf</div>
+              Schnell, würfel Initiative!</br>
+              <i class='fas fa-dice-d20' style='font-size:36px' onclick='randomNumber()'></i><span> = <span id="zahl"  class="eingaben"></span></span></br>
+              <div id= page><span id="index">0</span>/<span id="length" value="0">0</span></div>
+            </div>
+          </div>
+          <div>
+            <button class="button" onclick="latest()">Neuester</button>
+            <button class="button" onclick="prevForm()">Vorheriger</button>
+            <button class="button" onclick="nextForm()">Nächster</button>
+          </div>
+
+          <div id="introText">
+            <img id="eNoteBackg2" alt="Hintergrund Briefpapier" src="../Sources/End_Brief_background.jpg" style="height:550px;width:550px;">
+            <div id="endingText">
+              <p>Verehrte Geschwister,</p>
+              <p>
+                ihr habt es also auch endlich bis hierher geschafft.
+                Ich bin mir sicher, dass eure Reise ebenso <span id="adj2" class="eingaben">Adjektiv</span> war wie meine. Großmutter liebte selbst das Abenteuer.
+                Nachdem sie ja als Wissenschaftlerin im Bereich <span id="wiss2" class="eingaben">Wissenschaft</span> arbeitete, hatte sie immer mit vielen Mysterien zu tun.
+                Sie wäre stolz auf euch.
+                Nun sollen ihre Rätsel bald zu einem Ende kommen.
+                Doch nicht bevor sie euch noch ein letztes Mal nach den Quartettkarten suchen lässt, mit denen wir als Kinder so gern gespielt haben.
+                Erinnert ihr euch? Überall hat sie sie versteckt.
+                Im Schrank <span id="richtung2" class="eingaben">links/rechts</span> im Flur, gleich wenn man rein kommt.
+                Oder im Garten. Dieser verrückte Garten.
+                Wisst ihr noch? Der war voll davon: <span id="gegenstand2" class="eingaben">Gegenstände</span>.
+                <span id="ausruf2" class="eingaben">Ausruf des Erstaunens</span>! Manchmal fanden wir die alten Karten auch nur in der Wiese beim <span id="aktiv2" class="eingaben">Aktivität</span>.
+                Und jedes Mal hat Großmutter sie wieder für uns versteckt. Manchmal sogar <span id="zahl2" class="eingaben">Zahl</span> mal am Tag.
+              </p>
+              <p>
+                Vielleicht sollen diese, ihre letzten Rätsel, uns etwas sagen, uns möglicherweise ihr Lebenswerk näher bringen. Doch das müsst ihr für euch selbst herausfinden.
+              </p>
+              <p>
+                Und nun viel Vergnügen bei der Suche!
+              </p>
+              <p>
+                In Liebe,</br><span id="name2" class="eingaben"></span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
