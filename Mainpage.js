@@ -238,6 +238,7 @@ function testPhone(){
 
   if(cor1 == t1Numb && cor2 == t2Numb && cor3 == t3Numb && cor4 == t4Numb){
     displayCard("c1","e1");
+    document.getElementById("phone").setAttribute("onclick", "javascript:function() { return false; };");
   }else{
     document.getElementById("t1").style.color = "red";
     document.getElementById("t2").style.color = "red";
