@@ -1,4 +1,4 @@
-
+/** Just a Test**/
 /**Variables**/
 var cardCounter = 0;
 var cardAreas = {
