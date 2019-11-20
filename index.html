@@ -481,8 +481,8 @@
           <p>Bist du neu hier?</br>
             Wir haben ein kleines Tutorial für dich gestaltet!</br>
             Willst du das Tutorial spielen, oder willst du dieses Adventure auf eigene Faust erkunden?</p>
-          <button id="yestut" onclick="displayModalNext('modal13','modal14')">Starte Tutorial</button>
-          <button id="notut" onclick="overlayOff('modal13')">Erkunde alleine</button>
+          <button id="yestut" class="button" onclick="displayModalNext('modal13','modal14')">Starte Tutorial</button>
+          <button id="notut" class="button" onclick="overlayOff('modal13')">Erkunde alleine</button>
         </div>
       </div>
 
@@ -492,7 +492,7 @@
             Das ist ein Point-and-klick-Adventure!</br>
             Du kannst mit deiner Maus über den Bildschirm fahren und verschiedene Gegenstände anklicken.
           </p>
-          <i class='fas fa-arrow-right'onclick="displayModalNext('modal14', 'tut1');"></i>
+          <i id="ar1" class='fas fa-arrow-right'onclick="displayModalNext('modal14', 'tut1');"></i>
         </div>
       </div>
 
@@ -514,9 +514,9 @@
           <p>
             Yay! Du hast deine erste Karte aufgesammelt! </br>
             Das ist dein Kartenalbum. Hier bewahrst du deine gessammelten Karten auf. </br>
-            Wenn du 8 Karten gesammelt hast, dann ist Oma glücklich und du ein*e richtige*r AbenteurerIn!
+            Wenn du 8 Karten gesammelt hast, dann ist Oma glücklich und du eine richtige AbenteurerIn!
           </p>
-          <i class='fas fa-arrow-right'onclick="displayModalNext('modal15','tut3')"></i>
+          <i id ="ar2" class='fas fa-arrow-right'onclick="displayModalNext('modal15','tut3')"></i>
         </div>
       </div>
 
@@ -532,10 +532,10 @@
             Achte dabei auf die Hinweise, die Großmutter zurückgelassen hat.</br>
             Es gibt viel zu klicken!
           </p>
-          <p> Das war das Tutorial! </br>
+          <p> Das war auch schon das Tutorial! </br>
             Nun hab viel Spaß beim Suchen, Grübeln und Finden!
           </p>
-          <button id= "startgame" onclick="overlayOff('modal16')">Los geht's!</button>
+          <button id= "startgame" class="button" onclick="overlayOff('modal16')">Los geht's!</button>
         </div>
       </div>
 
