@@ -27,6 +27,34 @@ body{
   z-index: -5;
 }
 
+#tut1, #tut2, #tut3{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 270px;
+  top:0px;
+  z-index: 0;
+}
+
+#tut2, #tut3{
+  z-index: 99;
+}
+
+#modal15{
+  z-index: 4;
+}
+
+#modal13Content,#modal14Content,#modal15Content, #modal16Content{
+  background-color: rgba(128, 0, 42,0.8);
+  margin: 15% auto;
+  padding: 20px 20px 20px 40px;
+  border: 0px solid #888;
+  text-align: left;
+  width: 306px;
+  height: auto;
+  left: 50%;
+  margin-left: -153px;
+}
+
 #f1R{
   position: absolute;
   left:696px;
