@@ -36,6 +36,9 @@ body{
 }
 
 #tut2, #tut3{
+  margin-left: 0px;
+  margin-top: 0px;
+  left: 0px;
   z-index: 99;
 }
 
