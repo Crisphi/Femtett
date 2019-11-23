@@ -1,4 +1,4 @@
-
+/** Just a Test**/
 /**Variables**/
 var cardCounter = 0;
 var cardAreas = {
@@ -41,6 +41,24 @@ function displayModal(modalId,closeIndex=0){
   span.onclick = function(){
     modal.style.display = "none";
   }
+}
+
+function displayModalTut(modalId,closeIndex=0, nextModal, nextIndex=0){
+  var modal = document.getElementById(modalId);
+  var span = document.getElementsByClassName("close")[closeIndex];
+  modal.style.display = "block";
+
+  span.onclick = function(){
+    modal.style.display = "none";
+    displayModal(nextModal, nextIndex);
+  }
+}
+
+function displayModalNext(modalId, nextModal, nextIndex=0){
+  var modal = document.getElementById(modalId);
+  modal.style.display = "none";
+  displayModal(nextModal,nextIndex);
+
 }
 
 function overlayOn(imgId, ovImg, overlay){
@@ -318,7 +336,7 @@ function startForm(callback){
 }
 
 function start(){
-  $.when(startForm()).then(function(){displayModal('startTextModal',0)});
+  $.when(startForm()).then(function(){displayModalTut('startTextModal',0, 'modal13')});
 }
 
 function displayWNote(modal, mClose, note, nClose){
