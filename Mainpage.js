@@ -338,7 +338,8 @@ function startForm(callback){
 }
 
 function start(){
-  $.when(startForm()).then(function(){displayModalTut('startTextModal',0, 'modal13')});
+  startForm();
+  displayModalTut('startTextModal',0, 'modal13');
 }
 
 function displayWNote(modal, mClose, note, nClose){
