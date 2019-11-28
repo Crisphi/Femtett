@@ -338,7 +338,6 @@ function startForm(callback){
 }
 
 function start(){
-  startForm();
   displayModalTut('startTextModal',0, 'modal13');
 }
 
