@@ -170,9 +170,9 @@ const gameBoard = {
             gameBoard.onMouseMove.apply(gameBoard, arguments);
         };
 
-        document.getElementById('startBtn').addEventListener('click', function () {
-            document.getElementById('instructions').style.display = 'none';
-        });
+        //document.getElementById('startBtn').addEventListener('click', function () {
+          //  document.getElementById('instructions').style.display = 'none';
+        //});
     },
 
     // Initiate the playing areas (space for scrambled pieces, and the actual puzzle board)

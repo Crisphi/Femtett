@@ -319,9 +319,7 @@ function randomNumber(){
 
 function startForm(callback){
   var tRaw;
-  tRaw = $.get("https://api.liveformhq.com/v1/forms/5d26e1ed-cb75-4b35-b1c1-b2f9867963fd/messages", {
-    api_key: "16105c44-8cde-4993-8468-cb93f00827f2"
-  }, function(response){
+  tRaw = $.get("https://getsimpleform.com/messages.js?api_token=83616c2d07981a59b557c634837b419d",{}, function(response){
     $("#adj").html(response[0].data.Adjektiv);
     $("#wiss").html(response[0].data.Wissenschaft);
     $("#richtung").html(response[0].data.Richtung);
@@ -338,6 +336,7 @@ function startForm(callback){
 }
 
 function start(){
+  startForm();
   displayModalTut('startTextModal',0, 'modal13');
 }
 
